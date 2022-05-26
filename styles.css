@@ -62,18 +62,17 @@ h6 {font-size: 16px;}
     border-radius: 5px;
     box-shadow: 5px 8px 7px 1px rgba(0, 0, 0, 0.33);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3em 2em 27em;
+    grid-template-columns: 1fr;/*Width of columns*/
+    grid-template-rows: 50px 41px 425px; /*Height of rows*/
     grid-template-areas:
-        'statusbar-wrapper statusbar-wrapper'
-        'navbar-wrapper navbar-wrapper'
-        'left-column right-column';
+        'statusbar-wrapper'
+        'navbar-wrapper'
+        'left-column';
 }
 
 .navbar-wrapper{
     font-family: 'Ubuntu Mono', monospace;
     grid-area:navbar-wrapper;
-    height: 35px;
     background-color: var(--activeTabColor);
     border-bottom: 1px solid var(--tabBorderColor);
     display:flex;
@@ -106,6 +105,7 @@ h6 {font-size: 16px;}
     grid-template-areas:
         'tabs-wrapper window-controls-wrapper';
     background-color: var(--inactiveTabColor);
+    border-bottom: 1px solid var(--tabBorderColor);
 }
 
 .tabs-wrapper{
@@ -119,6 +119,7 @@ h6 {font-size: 16px;}
     border-top-right-radius: 10px;
     padding: 10px 20px 0px 7px;
     margin-top: 15px;
+    margin-bottom: -2px;
     width:100px;
     margin-inline:5px;
     cursor: pointer;
@@ -148,7 +149,8 @@ h6 {font-size: 16px;}
 
 .window_control{
     font-size: 15px;
-    padding: 8px 0px;
+    padding-top: 15px;
+    padding-bottom: 5px;
     text-align: center;
     color: #67686A;
     width: 100%;
@@ -173,10 +175,22 @@ h6 {font-size: 16px;}
 
 .left-column{
     grid-area: left-column;
+    background-color: salmon;
 }
-.right-column{
-    grid-area: right-column;
+
+#profile-pic{
+    height:200px;
+    width:200px;
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+    display: block;
+    margin: 35px auto;
 }
+
+#bio-wrapper{
+    background-color: blue;
+}
+
 
 @media screen and (max-width: 1200px){
     .main-container{
