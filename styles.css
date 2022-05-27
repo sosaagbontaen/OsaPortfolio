@@ -11,10 +11,11 @@
     --secondaryText:#4b5156;
 }
 
-html, body{
+body{
     background-color: #F5F5F5;
     padding: 0;
     margin: 0;
+    transition: .3s;
 }
 
 h1, h2, h3, h4, h5, h6, strong{
@@ -44,10 +45,6 @@ h4 {font-size: 24px;}
 h5 {font-size: 20px;}
 h6 {font-size: 16px;}
 
-.main-container{
-    width: 1200px;
-    margin: 0 auto;
-}
 
 .greeting-wrapper{
     display: grid;
@@ -57,17 +54,21 @@ h6 {font-size: 16px;}
 }
 
 .window-wrapper{
-    background-color: var(--secondaryColor);
-    border: 0px solid rgb(0, 0, 0);
+    width: 1200px;
+    padding: .5px;
+    margin: 0 30px;
+    background-color: var(--inactiveTabColor);
     border-radius: 5px;
-    box-shadow: 5px 8px 7px 1px rgba(0, 0, 0, 0.33);
+    box-shadow: 5px 0px 7px 1px rgba(0, 0, 0, 0.33);
+    
+    /*Grid Display Settings*/
     display: grid;
     grid-template-columns: 1fr;/*Width of columns*/
     grid-template-rows: 50px 41px 425px; /*Height of rows*/
     grid-template-areas:
         'statusbar-wrapper'
         'navbar-wrapper'
-        'left-column';
+        'page-wrapper';
 }
 
 .navbar-wrapper{
@@ -89,10 +90,10 @@ h6 {font-size: 16px;}
 
 .url_bar{
     width: 85%;
-    margin: 6px 0px 5px 0px;
+    margin: 7px 0px 5px 0px;
     border-radius: 10px;
     border: 1px solid var(--inactiveTabColor);
-    padding-top: 3px;
+    padding-top: 5px;
     padding-left: 15px;
     color: var(--inactiveText);
 }
@@ -123,7 +124,7 @@ h6 {font-size: 16px;}
     width:100px;
     margin-inline:5px;
     cursor: pointer;
-    transition: .5s;
+    transition: .5s ease;
 }
 
 .tabs-toggle.is-active{
@@ -131,6 +132,7 @@ h6 {font-size: 16px;}
     border-top: 1px solid var(--tabBorderColor);
     border-left: 1px solid var(--tabBorderColor);
     border-right: 1px solid var(--tabBorderColor);
+    transition: .5s ease;
 }
 .tabs-toggle.is-active:hover{
     background-color: white;
@@ -138,7 +140,7 @@ h6 {font-size: 16px;}
 
 .tabs-toggle:hover{
     background-color: var(--inactiveTabColorHover);
-    transition: .5s;
+    transition: .5s ease;
 }
 
 .window-controls-wrapper{
@@ -155,12 +157,12 @@ h6 {font-size: 16px;}
     color: #67686A;
     width: 100%;
     height: 40%;
-    transition: .5s;
+    transition: .5s ease;
 }
 
 .window_control:hover{
     background-color: rgb(178, 191, 195);
-    transition: .2s;
+    transition: .2s ease;
 }
 
 #dot-exit{
@@ -170,31 +172,87 @@ h6 {font-size: 16px;}
 #dot-exit:hover{
     background-color: rgb(217, 35, 35);
     color:white;
-    transition: .5s;
+    transition: .5s ease;
 }
 
-.left-column{
-    grid-area: left-column;
-    background-color: salmon;
+.page-wrapper{
+    grid-area: page-wrapper;
+    background-color: whitesmoke;
+    display: flex;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-#profile-pic{
-    height:200px;
-    width:200px;
-    object-fit: cover;
-    border: 2px solid var(--borderColor);
-    display: block;
-    margin: 35px auto;
+#profile-pic-wrapper{
+    height:300px;
+    width:300px;
+    margin-top: 50px;
+    margin-left: 250px;
+    border-radius: 400px;
+    position: relative;
+    cursor:pointer;
+}
+
+#profile-pic-overlay, #profile-pic{
+    position: absolute;
+    border-radius: inherit;
+    height: inherit;
+    width: inherit;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+#profile-pic-overlay h3{
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    margin-top: 40%;
+    text-align:center;
+}
+
+#profile-pic:hover{
+    filter: none;
+    opacity: 0.3;
+    transition: .2s ease;
 }
 
 #bio-wrapper{
-    background-color: blue;
+    width: 400px;
+    margin: 70px 20px;
+    /*
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-areas:
+        'bio-title'
+        'bio-subtitle'
+        'bio-desc';*/
 }
 
+#bio-title{
+    font-weight:bolder;
+}
+
+#bio-subtitle{
+    font-weight:bold;
+}
+
+#bio-desc{
+    font-weight:normal;
+    font-family: 'Ubuntu Mono', monospace;
+    width: 400px;
+    height: 150px;
+    margin-top: 10px;
+    line-height: 30px;
+}
+
+.bio-sections{
+    margin: 5px 0;
+}
 
 @media screen and (max-width: 1200px){
-    .main-container{
-        width: 95%;
+    .window-wrapper{
+        /*width: 95%;*/
     }
 }
 
@@ -202,7 +260,7 @@ h6 {font-size: 16px;}
 @media(max-width: 1050px)
 {
     body{
-        background-color: green;
+        background-color: red;
         /*Don't worry about this until you're ready to make the window responsive*/
     }
 }

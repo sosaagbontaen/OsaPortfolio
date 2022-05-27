@@ -21,62 +21,66 @@
     <title>Samuel Osa-Agbontaen | Computer Science Student</title>
 </head>
 <body>
-    <section class = "sectype1">
-        <div class = "main-container">
-            <div class = "greeting-wrapper">
-                
+    <div class = "greeting-wrapper"></div>
+    <div class="window-wrapper">
+        <div class="statusbar-wrapper">
+            <div class="tabs-wrapper">
+                <div class = "tabs-toggle is-active">
+                    <span>Welcome</span>
+                </div>
+                <div class = "tabs-toggle">
+                    <span>Education</span>
+                </div>
+                <div class = "tabs-toggle">
+                    <span>Skills</span>
+                </div>
+                <div class = "tabs-toggle">
+                    <span>Experience</span>
+                </div>
+                <div class = "tabs-toggle">
+                    <span>Projects</span>
+                </div>
+                <div class = "tabs-toggle">
+                    <span>Contacts</span>
+                </div>
             </div>
-            <div class="window-wrapper">
-                <div class="statusbar-wrapper">
-                    <div class="tabs-wrapper">
-                        <div class = "tabs-toggle is-active">
-                            <span>Welcome</span>
-                        </div>
-                        <div class = "tabs-toggle">
-                            <span>Education</span>
-                        </div>
-                        <div class = "tabs-toggle">
-                            <span>Skills</span>
-                        </div>
-                        <div class = "tabs-toggle">
-                            <span>Experience</span>
-                        </div>
-                        <div class = "tabs-toggle">
-                            <span>Projects</span>
-                        </div>
-                        <div class = "tabs-toggle">
-                            <span>Contacts</span>
-                        </div>
-                    </div>
-                    <div class="window-controls-wrapper">
-                        <div id="dot-minimize" class="window_control">
-                            &mdash;
-                        </div>
-                        <div id="dot-restore" class="window_control">
-                           <i class="fa-regular fa-square"></i>
-                        </div>
-                        <div id="dot-exit" class="window_control">
-                            <i class="fa-regular fa-x"></i>
-                        </div>
-                    </div>
+            <div class="window-controls-wrapper">
+                <div id="dot-minimize" class="window_control">
+                    &mdash;
                 </div>
-                <div class="navbar-wrapper">
-                    <i class="fa-solid fa-arrow-left navicon"></i>
-                    <i class="fa-solid fa-arrow-right navicon"></i>
-                    <i class="fa-solid fa-refresh navicon"></i>
-                    <div class="url_bar">
-                        Welcome to my digital portfolio!
-                    </div>
+                <div id="dot-restore" class="window_control">
+                    <i class="fa-regular fa-square"></i>
                 </div>
-                <div class="left-column">
-                    <img id = "profile-pic" src="images/portrait_to_torso.jpg" alt="Samuel Osa-Agbontaen">
-                    <div id = "bio-wrapper">
-                        
-                    </div>
+                <div id="dot-exit" class="window_control">
+                    <i class="fa-regular fa-x"></i>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="navbar-wrapper">
+            <i class="fa-solid fa-arrow-left navicon"></i>
+            <i class="fa-solid fa-arrow-right navicon"></i>
+            <i class="fa-solid fa-refresh navicon"></i>
+            <div class="url_bar">
+                Welcome to my digital portfolio!
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div id="profile-pic-wrapper">
+                <div id="profile-pic-overlay">
+                    <h3>Say hello!</h3>
+                </div>
+                <img id = "profile-pic" src="images/portrait_to_torso.jpg" alt="Samuel Osa-Agbontaen">
+            </div>
+            <div id = "bio-wrapper">
+                <h1 id="bio-title" class = "bio-sections">Hello, </h1>
+                <h4 id="bio-subtitle" class = "bio-sections">My name is Samuel Osa-Agbontaen! </h4>
+                <h5 id="bio-desc" class = "bio-sections">
+                    I am an undergraduate student at Harvard University
+                    studying Computer Science graduating in 2024. Check out the
+                    other tabs above to learn more about me! </h5>
+            </div>
+        </div>
+    </div>
     <!--Using my JS scripts-->
     <script src="script.js"></script>
 </body>
