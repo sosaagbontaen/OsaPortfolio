@@ -56,7 +56,7 @@ h6 {font-size: 16px;}
 .window-wrapper{
     width: 1200px;
     padding: .5px;
-    margin: 0 30px;
+    margin: 0 auto;
     background-color: var(--inactiveTabColor);
     border-radius: 5px;
     box-shadow: 5px 0px 7px 1px rgba(0, 0, 0, 0.33);
@@ -88,7 +88,7 @@ h6 {font-size: 16px;}
     padding-left: 15px;
 }
 
-.url_bar{
+#url-bar{
     width: 85%;
     margin: 7px 0px 5px 0px;
     border-radius: 10px;
@@ -96,6 +96,7 @@ h6 {font-size: 16px;}
     padding-top: 5px;
     padding-left: 15px;
     color: var(--inactiveText);
+    transition: .3s;
 }
 
 .statusbar-wrapper{
@@ -127,14 +128,14 @@ h6 {font-size: 16px;}
     transition: .5s ease;
 }
 
-.tabs-toggle.is-active{
+.tabs-toggle.activeTab{
     background-color: var(--activeTabColor);
     border-top: 1px solid var(--tabBorderColor);
     border-left: 1px solid var(--tabBorderColor);
     border-right: 1px solid var(--tabBorderColor);
     transition: .5s ease;
 }
-.tabs-toggle.is-active:hover{
+.tabs-toggle.activeTab:hover{
     background-color: white;
 }
 
@@ -177,10 +178,23 @@ h6 {font-size: 16px;}
 
 .page-wrapper{
     grid-area: page-wrapper;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     display: flex;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+.page-wrapper.activePage{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.page-wrapper.welcome{
+    background-color: rgb(243, 252, 255);
 }
 
 #profile-pic-wrapper{
@@ -190,6 +204,7 @@ h6 {font-size: 16px;}
     margin-left: 250px;
     border-radius: 400px;
     position: relative;
+    object-fit: cover;
     cursor:pointer;
 }
 
@@ -212,13 +227,15 @@ h6 {font-size: 16px;}
 
 #profile-pic:hover{
     filter: none;
-    opacity: 0.3;
+    opacity: 0.25;
     transition: .2s ease;
 }
 
 #bio-wrapper{
     width: 400px;
     margin: 70px 20px;
+    border-left:1px solid var(--borderColor);
+    padding-left: 20px;
     /*
     display: grid;
     grid-template-columns: 1fr;
@@ -260,7 +277,7 @@ h6 {font-size: 16px;}
 @media(max-width: 1050px)
 {
     body{
-        background-color: red;
+        background-color: rgb(255, 195, 188);
         /*Don't worry about this until you're ready to make the window responsive*/
     }
 }
