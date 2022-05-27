@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6, strong{
 
 p, li, span, label, input, textarea{
     color: var(--mainText);
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Ubuntu', monospace;
 }
 
 a{
@@ -116,7 +116,6 @@ h6 {font-size: 16px;}
     padding-left: 15px;
 }
 .tabs-toggle{
-    font-family: 'Poppins', sans-serif;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px 20px 0px 7px;
@@ -194,7 +193,7 @@ h6 {font-size: 16px;}
 }
 
 .page-wrapper.welcome{
-    background-color: rgb(243, 252, 255);
+    background-color: #F5F5F7;
 }
 
 #profile-pic-wrapper{
@@ -232,10 +231,11 @@ h6 {font-size: 16px;}
 }
 
 #bio-wrapper{
-    width: 400px;
+    width: 500px;
     margin: 70px 20px;
     border-left:1px solid var(--borderColor);
     padding-left: 20px;
+    font-family: 'Roboto';
     /*
     display: grid;
     grid-template-columns: 1fr;
@@ -248,19 +248,19 @@ h6 {font-size: 16px;}
 
 #bio-title{
     font-weight:bolder;
+    color:#1D1D1F;
 }
 
 #bio-subtitle{
     font-weight:bold;
+    color:#6E6E73;
 }
 
 #bio-desc{
-    font-weight:normal;
-    font-family: 'Ubuntu Mono', monospace;
-    width: 400px;
+    width: 500px;
     height: 150px;
     margin-top: 10px;
-    line-height: 30px;
+    line-height: 32px;
 }
 
 .bio-sections{
