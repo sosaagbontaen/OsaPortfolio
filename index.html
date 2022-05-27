@@ -22,25 +22,25 @@
 </head>
 <body>
     <div class = "greeting-wrapper"></div>
-    <div class="window-wrapper">
-        <div class="statusbar-wrapper">
+    <div class="window-wrapper day">
+        <div class="statusbar-wrapper day">
             <div class="tabs-wrapper">
-                <div class = "tabs-toggle welcome activeTab">
+                <div class = "tabs-toggle welcome activeTab day">
                     <span>Welcome</span>
                 </div>
-                <div class = "tabs-toggle education">
+                <div class = "tabs-toggle education day">
                     <span>Education</span>
                 </div>
-                <div class = "tabs-toggle skills">
+                <div class = "tabs-toggle skills day">
                     <span>Skills</span>
                 </div>
-                <div class = "tabs-toggle experience">
+                <div class = "tabs-toggle experience day">
                     <span>Experience</span>
                 </div>
-                <div class = "tabs-toggle projects">
+                <div class = "tabs-toggle projects day">
                     <span>Projects</span>
                 </div>
-                <div class = "tabs-toggle contact">
+                <div class = "tabs-toggle contact day">
                     <span>Contact</span>
                 </div>
             </div>
@@ -56,15 +56,19 @@
                 </div>
             </div>
         </div>
-        <div class="navbar-wrapper">
+        <div class="navbar-wrapper day">
             <i class="fa-solid fa-arrow-left navicon"></i>
             <i class="fa-solid fa-arrow-right navicon"></i>
             <i class="fa-solid fa-refresh navicon"></i>
             <div id="url-bar">
                 Welcome to my digital portfolio!
-            </div>
+            </div><label id="theme-toggle" class = "day">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div id="toggle-ball" class = "day"></div>
+            </label>
         </div>
-        <div class="page-wrapper welcome activePage">
+        <div class="page-wrapper welcome activePage day">
             <div id="profile-pic-wrapper">
                 <div id="profile-pic-overlay">
                     <h3>Say hello!</h3>
@@ -72,26 +76,26 @@
                 <img id = "profile-pic" src="images/portrait_to_torso.jpg" alt="Samuel Osa-Agbontaen">
             </div>
             <div id = "bio-wrapper">
-                <h1 id="bio-title" class = "bio-sections">Hello, </h1>
-                <h3 id="bio-subtitle" class = "bio-sections">My name is Samuel Osa-Agbontaen! </h3>
-                <h5 id="bio-desc" class = "bio-sections">
+                <h1 id="bio-title" class = "bio-sections day">Hello, </h1>
+                <h3 id="bio-subtitle" class = "bio-sections day">My name is Samuel Osa-Agbontaen! </h3>
+                <h5 id="bio-desc" class = "bio-sections day">
                     I am a Computer Science student at Harvard graduating in 2024.
                     Check out the other tabs above to learn more about me! </h5>
             </div>
         </div>
-        <div class="page-wrapper education">
+        <div class="page-wrapper education day">
             education
         </div>
-        <div class="page-wrapper skills">
+        <div class="page-wrapper skills day">
             skills
         </div>
-        <div class="page-wrapper experience">
+        <div class="page-wrapper experience day">
             experience
         </div>
-        <div class="page-wrapper projects">
+        <div class="page-wrapper projects day">
             projects
         </div>
-        <div class="page-wrapper contact">
+        <div class="page-wrapper contact day">
             contact
         </div>
     </div>

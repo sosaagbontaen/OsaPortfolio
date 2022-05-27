@@ -45,6 +45,26 @@ function tabLogic(){
     }
 }
 
+function classListReplace(elt, setting1, setting2){
+    if (elt.classList.contains(setting1)){
+        elt.classList.add(setting2);
+        elt.classList.remove(setting1);
+    }
+    else{
+        elt.classList.add(setting1);
+        elt.classList.remove(setting2);
+    }
+}
+
+function toggleTheme(){
+    let toggler = document.querySelector("#theme-toggle")
+    let affected_items = document.querySelectorAll(".day");
+    toggler.addEventListener('click', function(){
+        affected_items.forEach(affected_item => {
+        classListReplace(affected_item,"night","day");
+        });
+    })
+}
+
 tabLogic();
-
-
+toggleTheme();
