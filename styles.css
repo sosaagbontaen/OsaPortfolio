@@ -25,8 +25,48 @@
 
 body{
     background-color: rgb(134, 60, 147);
+    background-image : 
+    url("images/marita-kavelashvili-forest-unsplash.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     padding: 0;
     margin: 0;
+}
+
+#edu-hex-container{
+    margin : auto;
+}
+
+.hex {
+    float: left;
+    margin-left: 28px;
+    margin-bottom: 20px;
+    transform: scale(160%);
+}
+.hex .top {
+    width: 0;
+    border-bottom: 30px solid #6C6;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+}
+.hex .middle {
+    width: 104px;
+    height: 60px;
+    background: #6C6;
+}
+.hex .bottom {
+    width: 0;
+    border-top: 30px solid #6C6;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+}
+.hex-row {
+    clear: left;
+}
+.hex-row.even {
+    margin-left: 53px;
 }
 
 h1, h2, h3, h4, h5, h6, strong{
@@ -68,7 +108,7 @@ h6 {font-size: 16px;}
     margin: 0 auto;
     border-radius: 5px;
     box-shadow: 5px 0px 7px 1px rgba(0, 0, 0, 0.33);
-    
+    opacity: .95;
     /*Grid Display Settings*/
     display: grid;
     grid-template-columns: 1fr;/*Width of columns*/
@@ -337,40 +377,84 @@ h6 {font-size: 16px;}
     font-family: 'Roboto';
 }
 
-#bio-title{
+#edu-wrapper{
+    width: 1000px;
+    margin-left: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+#edu-title{
+    padding-bottom: 5px;
+    font-size: 60px;
+    padding-top: 10px;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#edu-ico{
+    object-fit:cover;
+    width: 80px;
+    height:width;
+    margin-left: 20px;
+}
+
+#subtitle-container{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+}
+#subtitle-container #left, #right{
+    height:100%;
+    width:550px;
+    border-bottom: 1px solid black;
+    margin-top: -20px;
+}
+#edu-subtitle{
+    width:950px;
+    margin-inline: 0;
+}
+
+#edu-desc{
+    width:100%;
+}
+
+.bio-title{
     font-weight:bolder;
 }
 
-#bio-subtitle{
+.bio-subtitle{
     font-weight:bold;
 }
 
-#bio-title.day{
+.bio-title.day{
     color:var(--TitleDay);
 }
 
-#bio-subtitle.day{
+.bio-subtitle.day{
     color:var(--subTitleDay);
 }
 
-#bio-desc.day{
-    color:var(--textDay);
+.bio-desc.day{
+    color:var(--textDay); 
 }
 
-#bio-title.night{
+.bio-title.night{
     color:var(--TitleNight);
 }
 
-#bio-subtitle.night{
+.bio-subtitle.night{
     color:var(--subTitleNight);
 }
 
-#bio-desc.night{
+.bio-desc.night{
     color:var(--textNight);
 }
 
 
-#bio-desc{
+.bio-desc{
     width: 500px;
     height: 150px;
     margin-top: 10px;
