@@ -16,7 +16,6 @@
     --tabBorderColorDay:rgb(223, 238, 242);;
     --tabBorderColorNight: #234c56;
     --inactiveText: rgb(136, 144, 155);
-    --activeTabColor: #fff;
     --secondaryColor: #fff;
     --borderColor:#c1c1c1;
     --mainText:black;
@@ -28,45 +27,13 @@ body{
     background-image : 
     url("images/marita-kavelashvili-forest-unsplash.jpg");
     background-repeat: repeat;
-    background-size: cover;
+    background-size:auto;
     background-attachment: fixed;
     background-position: center;
     padding: 0;
     margin: 0;
-}
-
-#edu-hex-container{
-    margin : auto;
-}
-
-.hex {
-    float: left;
-    margin-left: 28px;
-    margin-bottom: 20px;
-    transform: scale(160%);
-}
-.hex .top {
-    width: 0;
-    border-bottom: 30px solid #6C6;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-}
-.hex .middle {
-    width: 104px;
-    height: 60px;
-    background: #6C6;
-}
-.hex .bottom {
-    width: 0;
-    border-top: 30px solid #6C6;
-    border-left: 52px solid transparent;
-    border-right: 52px solid transparent;
-}
-.hex-row {
-    clear: left;
-}
-.hex-row.even {
-    margin-left: 53px;
+    display:flex;
+    justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6, strong{
@@ -94,30 +61,24 @@ h4 {font-size: 24px;}
 h5 {font-size: 20px;}
 h6 {font-size: 16px;}
 
-
-.greeting-wrapper{
-    display: grid;
-    text-align: center;
-    align-content: center;
-    min-height: 2em;
-}
-
 .window-wrapper{
-    width: 1200px;
+    min-width: 200px;
+    width: 1300px;
     padding: .5px;
-    margin: 0 auto;
+    margin: 30px 30px;
+    
     border-radius: 5px;
     box-shadow: 5px 0px 7px 1px rgba(0, 0, 0, 0.33);
     opacity: .95;
     /*Grid Display Settings*/
     display: grid;
-    grid-template-columns: 1fr;/*Width of columns*/
+    grid-template-columns: 100%; /*Width of columns*/
     grid-template-rows: 50px 41px 1fr; /*Height of rows*/
     grid-template-areas:
     'statusbar-wrapper'
     'navbar-wrapper'
     'page-wrapper';
-    transition: all linear 300ms;
+    transition: background-color ease 300ms, color ease 300ms;
 }
 
 .window-wrapper.day{
@@ -133,9 +94,8 @@ h6 {font-size: 16px;}
 .navbar-wrapper{
     font-family: 'Ubuntu Mono', monospace;
     grid-area:navbar-wrapper;
-    background-color: var(--activeTabColor);
     display:flex;
-    transition: all linear 300ms;
+    transition: all ease 300ms;
 }
 
 .navbar-wrapper.day{
@@ -184,7 +144,7 @@ h6 {font-size: 16px;}
 	height: 22px;
 	width: 22px;
 	transform: translateX(0px);
-	transition: transform 0.2s linear;
+	transition: transform 0.2s ease;
 }
 
 #theme-toggle #toggle-ball.day{
@@ -210,24 +170,26 @@ h6 {font-size: 16px;}
 
 #url-bar{
     width: 85%;
-    margin: 7px 0px 5px 0px;
+    margin: 7px 5px 5px 0px;
     border-radius: 10px;
     border: 1px solid var(--inactiveTabColorDay);
     padding-top: 5px;
     padding-left: 15px;
     color: var(--inactiveText);
     background-color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .statusbar-wrapper{
     border-radius: 5px 5px 0px 0px;
     grid-area: statusbar-wrapper;
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    grid-template-areas:
-        'tabs-wrapper window-controls-wrapper';
-    background-color: inherit;
+    display: flex;
+    background-color: none;
     color: inherit;
+    justify-content: space-between;
+    transition: border-color ease 300ms;
 }
 .statusbar-wrapper.day{
     border-bottom: 1px solid var(--tabBorderColorDay);
@@ -236,25 +198,43 @@ h6 {font-size: 16px;}
     border-bottom: 1px solid var(--tabBorderColorNight);
 }
 
-
 .tabs-wrapper{
     grid-area: tabs-wrapper;
+    width:76%;
     display: flex;
     padding-left: 15px;
+    justify-content: left;
 }
 .tabs-toggle{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding: 10px 20px 0px 7px;
+    padding: 10px 10px 0px 7px;
     margin-top: 15px;
     margin-bottom: -2px;
     width:100px;
+    text-align: center;
     margin-inline:5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
+.tab-hamburger{
+    display:none;
+    margin:auto 10px auto 0;
+    font-size: 29px;
+}
+
+.tab-hamburger.day{
+    color: var(--inactiveTabColorNight);
+}
+
+.tab-hamburger.night{
+    color:var(--inactiveTabColorDay)
+}
+
+
 .tabs-toggle.activeTab{
-    transition: background-color linear 300ms;
+    transition: background-color ease 300ms, border-color ease 300ms;
 }
 
 .tabs-toggle:hover{
@@ -281,8 +261,9 @@ h6 {font-size: 16px;}
 
 .window-controls-wrapper{
     display: flex;
+    width:150px;
     height: 100%;
-    grid-area: window-controls-wrapper;
+    grid-area: 'window-controls-wrapper';
 }
 
 .window_control{
@@ -290,15 +271,15 @@ h6 {font-size: 16px;}
     padding-top: 15px;
     padding-bottom: 5px;
     text-align: center;
-    color: #67686A;
-    width: 100%;
+    color: inherit;
+    width: 50px;
     height: 40%;
-    transition: .5s ease;
 }
+
 
 .window_control:hover{
     background-color: rgb(178, 191, 195);
-    transition: .2s ease;
+    transition: .4s ease;
 }
 
 #dot-exit{
@@ -308,21 +289,19 @@ h6 {font-size: 16px;}
 #dot-exit:hover{
     background-color: rgb(217, 35, 35);
     color:white;
-    transition: .5s ease;
 }
 
 .page-wrapper{
     grid-area: page-wrapper;
-    display:flex;
+    display:grid;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     visibility: hidden;
     opacity: 0;
-    transition: all linear 300ms;
+    transition: all ease 300ms;
 }
 
 .page-wrapper.welcome{
-    display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
     'profile-pic-wrapper bio-wrapper';
@@ -492,17 +471,15 @@ h6 {font-size: 16px;}
     margin: 5px 0;
 }
 
-@media screen and (max-width: 1200px){
-    .window-wrapper{
-        /*width: 95%;*/
+@media screen and (max-width: 787px){
+    .tabs-toggle{
+        display: none;
     }
-}
-
-/*Responsive*/
-@media(max-width: 1200px)
-{
-    .window-wrapper{
-        width: 95%;
+    .tab-hamburger{
+        display:block;
+    }
+    .tabs-wrapper{
+        justify-content: left;
     }
 }
 
