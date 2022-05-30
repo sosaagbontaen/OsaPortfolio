@@ -143,7 +143,6 @@ h6 {font-size: 16px;}
 	left: 2px;
 	height: 22px;
 	width: 22px;
-	transform: translateX(0px);
 	transition: transform 0.2s ease;
 }
 
@@ -152,7 +151,7 @@ h6 {font-size: 16px;}
 }
 
 #theme-toggle #toggle-ball.night{
-	transform: translateX(24px);
+	transform: translateX(20px);
 }
 
 
@@ -293,7 +292,6 @@ h6 {font-size: 16px;}
 
 .page-wrapper{
     grid-area: page-wrapper;
-    display:grid;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     visibility: hidden;
@@ -302,9 +300,8 @@ h6 {font-size: 16px;}
 }
 
 .page-wrapper.welcome{
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-    'profile-pic-wrapper bio-wrapper';
+    display:flex;
+    justify-content: center;
 }
 
 .page-wrapper.day{
@@ -326,15 +323,13 @@ h6 {font-size: 16px;}
     width:300px;
     margin-top: 50px;
     margin-left: 250px;
-    border-radius: 400px;
-    position: relative;
+    border-radius: 200px;
     object-fit: cover;
     cursor:pointer;
     grid-area: profile-pic-wrapper;
 }
 
 #profile-pic-overlay, #profile-pic{
-    position: absolute;
     border-radius: inherit;
     height: inherit;
     width: inherit;
@@ -352,34 +347,38 @@ h6 {font-size: 16px;}
 
 #profile-pic:hover{
     filter: none;
-    opacity: 0.25;
+    opacity: 0.35;
     transition: .2s ease;
 }
 
 #bio-wrapper{
-    width: 500px;
     margin: 70px 20px;
     border-left:1px solid var(--borderColor);
     padding-left: 20px;
     font-family: 'Roboto';
     grid-area:bio-wrapper;
     padding-top: 10px;
-    padding-bottom:10px;
+    font-size: 50px;
     display:grid;
     grid-template-columns: 1fr;
     grid-template-areas:
     'bio-title'
     'bio-subtitle'
     'bio-desc';
+    border: 1px solid red;
 }
 
 #bio-title{
+    width:100%;
     grid-area:bio-title;
+    border: 1px solid red;
 }
 #bio-subtitle{
+    border: 1px solid red;
     grid-area:bio-subtitle;
 }
 #bio-desc{
+    border: 1px solid red;
     grid-area:bio-desc;
 }
 
