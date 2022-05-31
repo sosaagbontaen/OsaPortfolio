@@ -34,6 +34,7 @@ body{
     margin: 0;
     display:flex;
     justify-content: center;
+    overflow:hidden;
 }
 
 h1, h2, h3, h4, h5, h6, strong{
@@ -172,7 +173,6 @@ h6 {font-size: 16px;}
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    border:none;
 }
 
 .statusbar-wrapper{
@@ -357,54 +357,11 @@ h6 {font-size: 16px;}
     flex-direction: column;
 }
 
-#bio-title{
-}
-#bio-subtitle{
-}
-#bio-desc{
-}
-
-#edu-wrapper{
-    width: 1000px;
-    margin-left: 100px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
 #edu-title{
-    padding-bottom: 5px;
-    font-size: 60px;
-    padding-top: 10px;
-    width: 100%;
+    background-color: #008CBA;
     display:flex;
     flex-direction: row;
-    justify-content: center;
-}
-
-#edu-ico{
-    object-fit:cover;
-    width: 80px;
-    height:width;
-    margin-left: 20px;
-}
-
-#subtitle-container{
-    width:100%;
-    display:flex;
-    flex-direction:row;
-}
-#subtitle-container #left, #right{
-    height:100%;
-    width:550px;
-    border-bottom: 1px solid black;
-    margin-top: -20px;
-}
-#edu-subtitle{
-    width:950px;
-    margin-inline: 0;
-}
-
-#edu-desc{
+    height:100px;
     width:100%;
 }
 
