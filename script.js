@@ -1,14 +1,38 @@
 const tabs = document.querySelectorAll(".tabs-toggle");
 
+function urlUpdate(pageNameItem, urlItem){
+    if(pageNameItem == "welcome"){
+        urlItem.textContent = "Welcome to my digital portfolio!";
+    }
+    else if (pageNameItem == "education"){
+        urlItem.textContent = "Here's what I've been learning in the classroom!"
+    }
+    else if(pageNameItem == "skills"){
+        urlItem.textContent = "Here are some skills I've picked up so far.";
+    }
+    else if(pageNameItem == "experience"){
+        urlItem.textContent = "I've had exciting opportunities to learn and work beyond the classroom.";
+    }
+    else if(pageNameItem == "projects"){
+        urlItem.textContent = "I like showcasing what I've learned through projects. Check them out!";
+    }
+    else if(pageNameItem == "contact"){
+        urlItem.textContent = "I'm looking forward to hearing from you!";
+    }        
+}
+
 function tabLogic(){
     for (let i = 0; i < tabs.length; i++) {
         tabs[i].addEventListener('click', function() {
+            
             //Find current active tab & page
             let cur_tab = document.querySelector('.activeTab');
             let cur_page = document.querySelector('.activePage');
+            
             //De-activate active tab & page
             cur_tab.className = cur_tab.className.replace(' activeTab', '');
             cur_page.className = cur_page.className.replace(' activePage', '');
+            
             //Activate clicked tab
             this.className += ' activeTab';
 
@@ -22,24 +46,7 @@ function tabLogic(){
 
             //Update URL Bar
             let urlBar = document.querySelector("#url-bar");
-            if(pageNamefromTab == "welcome"){
-                urlBar.textContent = "Welcome to my digital portfolio!";
-            }
-            else if (pageNamefromTab == "education"){
-                urlBar.textContent = "Here's what I've been learning in the classroom!"
-            }
-            else if(pageNamefromTab == "skills"){
-                urlBar.textContent = "Here are some skills I've picked up so far.";
-            }
-            else if(pageNamefromTab == "experience"){
-                urlBar.textContent = "I've had exciting opportunities to learn and work beyond the classroom.";
-            }
-            else if(pageNamefromTab == "projects"){
-                urlBar.textContent = "I like showcasing what I've learned through projects. Check them out!";
-            }
-            else if(pageNamefromTab == "contact"){
-                urlBar.textContent = "I'm looking forward to hearing from you!";
-            }
+            urlUpdate(pageNamefromTab,urlBar);
         })
         
     }
