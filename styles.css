@@ -303,6 +303,13 @@ h6 {font-size: 16px;}
     overflow:auto;
 }
 
+.page-wrapper.welcome{
+    flex-direction: row;
+}
+.page-wrapper.education{
+    flex-direction: column;
+}
+
 .page-wrapper.day{
     background-color: var(--mainColorDay);
     
@@ -357,12 +364,67 @@ h6 {font-size: 16px;}
     flex-direction: column;
 }
 
-#edu-title{
-    background-color: #008CBA;
+.page-headers{
     display:flex;
     flex-direction: row;
-    height:100px;
+    height:80px;
     width:100%;
+    justify-content: center;
+    padding-top:10px;
+}
+
+#edu-ico{
+    margin-top:0px;
+    margin-right:12px;
+    margin-bottom: 0;
+    width:70px;
+    height:70px;
+}
+
+hr{
+    width:70%;
+}
+
+
+hr.night{
+    border-color : var(--subTitleNight);
+}
+
+.course-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    'course1 course2 course3'
+    'course4 course5 course6';
+    background-color: #008CBA;
+    justify-items: center;
+}
+
+.course{
+    width:300px;
+    height:100px;
+    background-color: #17a2b8;
+    border: 1px solid red;
+}
+
+#course1{
+    grid-area: course1;
+}
+#course2{
+    grid-area: course2;
+}
+#course3{
+    grid-area: course3;
+}
+#course4{
+    grid-area: course4;
+}
+#course5{
+    grid-area: course5;
+}
+#course6{
+    grid-area: course6;
 }
 
 .section-title{
@@ -424,7 +486,7 @@ h6 {font-size: 16px;}
 /*Responsive*/
 @media(max-width: 800px)
 {
-    .page-wrapper{
+    .page-wrapper.welcome{
         flex-direction: column;
     }
 
