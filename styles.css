@@ -33,6 +33,7 @@ body{
     padding: 0;
     margin: 0;
     display:flex;
+    flex-direction: row;
     justify-content: center;
     overflow:hidden;
 }
@@ -67,7 +68,7 @@ h6 {font-size: 16px;}
     width: 1300px;
     padding: .5px;
     margin: 30px 30px;
-    height:500px;
+    height:90vh;
     border-radius: 5px;
     box-shadow: 5px 0px 7px 1px rgba(0, 0, 0, 0.33);
     opacity: .95;
@@ -305,6 +306,8 @@ h6 {font-size: 16px;}
 
 .page-wrapper.welcome{
     flex-direction: row;
+    align-items: center;
+    
 }
 .page-wrapper.education{
     flex-direction: column;
@@ -320,23 +323,21 @@ h6 {font-size: 16px;}
 
 #profile-pic-wrapper{
     width:80%;
-    height:auto;
-    /*margin-left: 20%;*/
+    height:100%;
     cursor:pointer;
     display:flex;
     justify-content: right;
+    align-items: center;
+    margin-inline: 20px;
 }
 
 #profile-pic-overlay, #profile-pic{
-    height: 300px;
-    width: 300px;
-    margin-top:40px;
-    margin-bottom:50px;
-    margin-left:50px;
-    margin-right:20px;
+    height: 20em;
+    width: 20em;
     border-radius: 100%;
     transition: .5s ease;
-    background-color: #008CBA;
+    background-color: green;
+    margin-left: 10px;
 }
 
 #profile-pic-overlay h3{
@@ -354,7 +355,7 @@ h6 {font-size: 16px;}
 }
 
 #bio-wrapper{
-    margin: auto;
+    justify-content: center;
     border-left: 1px solid var(--borderColor);
     padding-left: 20px;
     padding-right: 50px;
@@ -362,6 +363,7 @@ h6 {font-size: 16px;}
     font-size: 50px;
     display:flex;
     flex-direction: column;
+    height:70%;
 }
 
 .page-headers{
@@ -369,6 +371,7 @@ h6 {font-size: 16px;}
     flex-direction: row;
     height:80px;
     width:100%;
+    align-items: center;
     justify-content: center;
     padding-top:10px;
 }
@@ -391,40 +394,21 @@ hr.night{
 }
 
 .course-wrapper{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-    'course1 course2 course3'
-    'course4 course5 course6';
-    background-color: #008CBA;
-    justify-items: center;
+    background-color: green;
+    border: 1px solid yellow;
+
+    display: grid;
+    align-items: center;
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 30px;
 }
 
 .course{
-    width:300px;
-    height:100px;
     background-color: #17a2b8;
     border: 1px solid red;
-}
-
-#course1{
-    grid-area: course1;
-}
-#course2{
-    grid-area: course2;
-}
-#course3{
-    grid-area: course3;
-}
-#course4{
-    grid-area: course4;
-}
-#course5{
-    grid-area: course5;
-}
-#course6{
-    grid-area: course6;
+    height:100px;
+    width:100%;
 }
 
 .section-title{
@@ -471,7 +455,20 @@ hr.night{
     margin: 5px 0;
 }
 
-@media screen and (max-width: 787px){
+@media screen and (max-width: 400px){
+    #edu-title{
+        font-size:30px;
+    }
+    #edu-ico{
+        width:50px;
+        height:50px;
+    }
+}
+
+/*Responsive*/
+/*@media(max-width: 800px)*/
+@media screen and (max-width: 787px)
+{
     .tabs-toggle{
         display: none;
     }
@@ -481,34 +478,31 @@ hr.night{
     .tabs-wrapper{
         justify-content: left;
     }
-}
 
-/*Responsive*/
-@media(max-width: 800px)
-{
     .page-wrapper.welcome{
         flex-direction: column;
     }
 
     #bio-wrapper{
-        width:80%;
-        margin: auto;
-        padding: auto;
+        width:90%;
+        padding: 0;
         border-left:none;
         border-top: 1px solid var(--borderColor);
         text-align: center;
-        margin-bottom: 0px;
+        margin-bottom:20px;
+        justify-content: flex-start;
     }
     #profile-pic-wrapper{
-        justify-content: center;
+        margin:0;
         width:100%;
+        height:auto;
     }
     #profile-pic{
         margin:auto;
         margin-top:20px;
         margin-bottom:20px;
-        width:50vw;
-        height:50vw;
+        width:10em;
+        height:10em;
     }
     
 }
