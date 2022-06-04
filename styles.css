@@ -394,21 +394,21 @@ hr.night{
 }
 
 .course-wrapper{
+    align-self: center;
+    justify-self: center;
+    width:80%;
     background-color: green;
-    border: 1px solid yellow;
-
     display: grid;
-    align-items: center;
-
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 30px;
+    gap:1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
 }
 
 .course{
     background-color: #17a2b8;
     border: 1px solid red;
-    height:100px;
+    height:200px;
     width:100%;
+    word-wrap: break-word;
 }
 
 .section-title{
@@ -456,6 +456,9 @@ hr.night{
 }
 
 @media screen and (max-width: 400px){
+    .course-wrapper{
+        grid-template-columns: repeat(auto-fit, 100%);
+    }
     #edu-title{
         font-size:30px;
     }
@@ -469,6 +472,7 @@ hr.night{
 /*@media(max-width: 800px)*/
 @media screen and (max-width: 787px)
 {
+
     .tabs-toggle{
         display: none;
     }
