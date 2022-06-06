@@ -5,7 +5,7 @@ function urlUpdate(pageNameItem, urlItem){
         urlItem.textContent = "Welcome to my digital portfolio!";
     }
     else if (pageNameItem == "education"){
-        urlItem.textContent = "Here's what I've been learning in the classroom!"
+        urlItem.textContent = "Relevant coursework towards my A.B in Computer Science."
     }
     else if(pageNameItem == "skills"){
         urlItem.textContent = "Here are some skills I've picked up so far.";
