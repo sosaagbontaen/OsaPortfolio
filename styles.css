@@ -136,6 +136,7 @@ h6 {
     color: var(--inactiveTabColorDayHover);
 }
 
+
 #theme-toggle {
     box-sizing: border-box;
     border-radius: 50px;
@@ -347,15 +348,15 @@ h6 {
     overflow: auto;
 }
 
+
+.page-wrapper {
+    flex-direction: column;
+}
+
 .page-wrapper.welcome {
     flex-direction: row;
     align-items: center;
 
-}
-
-.page-wrapper.education,
-.page-wrapper.projects {
-    flex-direction: column;
 }
 
 .page-wrapper.day {
@@ -619,4 +620,12 @@ hr.night {
         height: 10em;
     }
 
+}
+
+.tabs-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 15px;
+    cursor: pointer;
 }

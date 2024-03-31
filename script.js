@@ -16,6 +16,9 @@ function urlUpdate(pageNameItem, urlItem) {
     else if (pageNameItem == "projects") {
         urlItem.textContent = "I like showcasing what I've learned through projects. Check them out!";
     }
+    else if (pageNameItem == "creative") {
+        urlItem.textContent = "Outside of software, I love to create!";
+    }
     else if (pageNameItem == "contact") {
         urlItem.textContent = "I'm looking forward to hearing from you!";
     }
@@ -88,6 +91,12 @@ function mobileTabLogic() {
     })
 }
 
+function videoStartTime() {
+    let vid = document.getElementById("chinesesong_video");
+    vid.currentTime = 122;
+}
+
 tabLogic();
 toggleTheme();
 mobileTabLogic();
+videoStartTime();
