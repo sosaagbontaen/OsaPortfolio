@@ -91,12 +91,6 @@ function mobileTabLogic() {
     })
 }
 
-function videoStartTime() {
-    let vid = document.getElementById("chinesesong_video");
-    vid.currentTime = 122;
-}
-
 tabLogic();
 toggleTheme();
 mobileTabLogic();
-videoStartTime();
