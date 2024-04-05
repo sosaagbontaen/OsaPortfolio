@@ -1,4 +1,4 @@
-const tabs = document.querySelectorAll(".tabs-toggle");
+const tabs = document.querySelectorAll(".page-btn");
 
 function urlUpdate(pageNameItem, urlItem) {
     if (pageNameItem == "welcome") {
@@ -39,7 +39,7 @@ function tabLogic() {
             //Activate clicked tab
             this.className += ' activeTab';
 
-            let pageNamefromTab = this.className.split(" ")[1];
+            let pageNamefromTab = this.className.split(" ")[0];
             //console.log(pageNamefromTab);
             //console.log(document.querySelector(".page-wrapper." + pageNamefromTab));
             let newPage = document.querySelector(".page-wrapper." + pageNamefromTab);
@@ -79,15 +79,9 @@ function toggleTheme() {
 function mobileTabLogic() {
     const hamburger = document.querySelector(".tab-hamburger");
     const statusbar = document.querySelector(".statusbar-wrapper");
+    const sideMenu = document.querySelector(".top-menu");
     hamburger.addEventListener('click', function () {
-        if (statusbar.classList.contains('open')) {
-            classListReplace(statusbar, 'open', 'closed');
-            statusbar.style.height = "60px";
-        }
-        else {
-            classListReplace(statusbar, 'closed', 'open');
-            statusbar.style.height = "180px";
-        }
+        sideMenu.classList.toggle("active")
     })
 }
 
