@@ -512,6 +512,7 @@ hr.night {
 
 .section-title {
     font-weight: bolder;
+    text-align: center;
 }
 
 .section-subtitle {
@@ -552,7 +553,7 @@ hr.night {
         grid-template-columns: repeat(auto-fit, 100%);
     }
 
-    #edu-title {
+    .section-title {
         font-size: 30px;
     }
 
@@ -571,6 +572,11 @@ hr.night {
 
 /* Mobile View */
 @media screen and (max-width: 787px) {
+
+    .section-title {
+        font-size: 50px;
+    }
+
     .tabs-toggle {
         display: none;
     }
