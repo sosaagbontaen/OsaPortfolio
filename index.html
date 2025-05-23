@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--Metadata and boilerplate-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!-- Avoid caching of site since it leads to issue with github pages deployment -->
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
     <!--Using Fonts from Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Ubuntu+Mono&display=swap"
+        rel="stylesheet">
+
     <!--Using fontawesome icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--Using my CSS stylesheet-->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/main.css">
 
 
-    <title>Samuel Osa-Agbontaen | Computer Science Student</title>
+    <title>Samuel Osa-Agbontaen</title>
 </head>
+
 <body>
     <div class="window-wrapper day">
         <div class="statusbar-wrapper day closed">
@@ -27,23 +36,23 @@
                 <div class="tab-hamburger day">
                     <i class="fas fa-bars"></i>
                 </div>
-                <div class = "tabs-toggle welcome activeTab day">
-                    <span>Welcome</span>
+                <div class="welcome page-btn tabs-toggle  activeTab day">
+                    <span>👋🏾<br>Welcome</span>
                 </div>
-                <div class = "tabs-toggle education day">
-                    <span>Education</span>
+                <div class="experience page-btn tabs-toggle  day">
+                    <span>👔<br>Experience</span>
                 </div>
-                <div class = "tabs-toggle skills day">
-                    <span>Skills</span>
+                <div class="education page-btn tabs-toggle  day">
+                    <span>🎓<br>Education</span>
                 </div>
-                <div class = "tabs-toggle experience day">
-                    <span>Experience</span>
+                <div class="projects page-btn tabs-toggle  day">
+                    <span>📱Software Projects</span>
                 </div>
-                <div class = "tabs-toggle projects day">
-                    <span>Projects</span>
+                <div class="creative page-btn tabs-toggle  day">
+                    <span>🎨Creative Projects</span>
                 </div>
-                <div class = "tabs-toggle contact day">
-                    <span>Contact</span>
+                <div class="contact page-btn tabs-toggle  day">
+                    <span>📞Resume & Contact</span>
                 </div>
             </div>
             <div class="window-controls-wrapper day">
@@ -57,8 +66,6 @@
                     <i class="fa-regular fa-x"></i>
                 </div>
             </div>
-            <!-- <div class="mobile-tabs-wrapper">
-            </div> -->
         </div>
         <div class="navbar-wrapper day">
             <i class="fa-solid fa-arrow-left navicon"></i>
@@ -66,37 +73,48 @@
             <i class="fa-solid fa-refresh navicon"></i>
             <div id="url-bar">
                 Welcome to my digital portfolio!
-            </div><label id="theme-toggle" class = "day">
+            </div><label id="theme-toggle" class="day">
                 <i class="fas fa-moon"></i>
                 <i class="fas fa-sun"></i>
-                <div id="toggle-ball" class = "day"></div>
+                <div id="toggle-ball" class="day"></div>
             </label>
+        </div>
+        <div class="top-menu">
+            <ul>
+                <li class="welcome page-btn">👋🏾 Welcome</li>
+                <li class="experience page-btn">👔 Experience</li>
+                <li class="education page-btn">🎓 Education</li>
+                <li class="projects page-btn">📱 Software Projects</li>
+                <li class="creative page-btn">🎨 Creative Projects</li>
+                <li class="contact page-btn">📞 Résumé & Contact</li>
+            </ul>
         </div>
         <div class="page-wrapper welcome activePage day">
             <div id="profile-pic-wrapper">
-                <img id = "profile-pic" src="images/portrait_to_torso.jpg" alt="Samuel Osa-Agbontaen">
+                <img id="profile-pic" src="./assets/graduation_headshot.jpg" alt="Samuel Osa-Agbontaen">
             </div>
-            <div id = "bio-wrapper">
-                <h1 id = "bio-title" class="section-title bio-sections day">Hello, </h1>
-                <h3 id = "bio-subtitle" class="section-subtitle bio-sections day">My name is Samuel Osa-Agbontaen! </h3>
-                <h5 id = "bio-desc" class="section-desc bio-sections day">
-                    I am an A.B. Candidate in Computer Science at Harvard College
-                    graduating in 2024. Check out the other tabs above to learn
+            <div id="bio-wrapper">
+                <h1 id="bio-title" class="section-title bio-sections day">Hello, </h1>
+                <h3 id="bio-subtitle" class="section-subtitle bio-sections day">My name is Samuel Osa-Agbontaen! </h3>
+                <h5 id="bio-desc" class="section-desc bio-sections day">
+                    I am a Harvard University graduate with a Bachelor's in Computer Science.
+                    Check
+                    out the other tabs
+                    above to learn
                     more about me! </h5>
             </div>
         </div>
         <div class="page-wrapper education day">
             <div id="edu-header" class="page-headers">
-                <img id = "edu-ico" src="images/harvard_insignia.png" alt="Harvard">
-                <h1 id = "edu-title" class="section-title edu-sections day">Education</h1>
-                
+                <img id="edu-ico" src="./assets/harvard_insignia.png" alt="Harvard">
+                <h1 id="edu-title" class="section-title edu-sections day">Education</h1>
             </div>
-            <hr class = "section-subtitle day" style="width:80%; margin-bottom: 30px;">
+            <hr class="section-subtitle day" style="width:80%; margin-bottom: 30px;">
             <div class="courses-wrapper">
                 <div id="cs51" class="course day">
-                    <img src="images/abstraction-coursepic.jpg" alt="" class="course-thumbnail">
-                    <h4 class = "course-title section-subtitle day">CS51 @ Harvard</h4>
-                    <h6 class = "course-subtitle section-subtitle day">Abstraction & Design in Computation</h6>
+                    <img src="./assets/abstraction-coursepic.jpg" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">CS51 @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Abstraction & Design in Computation</h6>
                     <hr style="width: 85%;
                     margin-bottom: 5px;">
                     <p class="course-info section-desc day">
@@ -108,24 +126,10 @@
                         lab-based class structure.
                     </p>
                 </div>
-                <div id="cs61" class="course day">
-                    <img src="images/systems-coursepic.png" alt="" class="course-thumbnail">
-                    <h4 class = "course-title section-subtitle day">CS61 @ Harvard</h4>
-                    <h6 class = "course-subtitle section-subtitle day">Systems Programming and Machine Organization</h6>
-                    <hr style="width: 85%;
-                    margin-bottom: 5px;">
-                    <p class="course-info section-desc day">
-                        Learned about data representation in computer memory,
-                        assembly, how data is moved across reigsters, process
-                        control, kernel interaction, virtual memory, caching,
-                        system calls, the shell, and debugging through a
-                        semester-long series of interactive problem-sets.
-                    </p>
-                </div>
                 <div id="cs20" class="course day">
-                    <img src="images/discrete-math-coursepic.png" alt="" class="course-thumbnail">
-                    <h4 class = "course-title section-subtitle day">CS20 @ Harvard</h4>
-                    <h6 class = "course-subtitle section-subtitle day">Discrete Mathematics for Computer Science</h6>
+                    <img src="./assets/discrete-math-coursepic.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">CS20 @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Discrete Mathematics for Computer Science</h6>
                     <hr style="width: 85%;
                     margin-bottom: 5px;">
                     <p class="course-info section-desc day">
@@ -137,10 +141,23 @@
                         complexity, and cryptography.
                     </p>
                 </div>
+                <div id="cs120" class="course day">
+                    <img src="./assets/binary_search.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">CS120 @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Algorithms and their Limitations</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Learned how to abstract computational problems mathematically and design efficient algorithms
+                        using rigorous mathematical proofs. Also learned about computational limitations. Topics ranged
+                        from : Asymptotic analysis, graph algorithms, logic and satisfiability, models of computation,
+                        computational complexity (P & NP), uncomputability
+                    </p>
+                </div>
                 <div id="cs175" class="course day">
-                    <img src="images/graphics-course-pic.jpg" alt="" class="course-thumbnail">
-                    <h4 class = "course-title section-subtitle day">CS175 @ Harvard</h4>
-                    <h6 class = "course-subtitle section-subtitle day">Computer Graphics</h6>
+                    <img src="./assets/graphics-course-pic.jpg" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">CS175 @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Computer Graphics</h6>
                     <hr style="width: 85%;
                     margin-bottom: 5px;">
                     <p class="course-info section-desc day">
@@ -153,10 +170,83 @@
                         algebra.
                     </p>
                 </div>
+                <div id="chinese" class="course day">
+                    <img src="./assets/hanzi.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">Mandarin Chinese @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Intermediate Chinese</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Progressed up to a high-intermediate level of proficiency in reading, writing, listening, and
+                        speaking skills in Chinese. Also developed cultural background and exposure to varying language
+                        styles.
+                    </p>
+                </div>
+                <div id="cs171" class="course day">
+                    <img src="./assets/dataviz.jpg" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">CS171 @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Data Visualization</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Learned how to create interactive data visualizations using JavaScript and D3. Also learned to
+                        evaluate and refine visualizations critically, apply structured design processes, and
+                        collaborate effectively within teams for diverse projects.
+                    </p>
+                </div>
+                <div id="cs178" class="course day">
+                    <img src="./assets/hci.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">CS178 @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Engineering Usable Interactive Systems</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Developed hands-on experience building usable interactive systems and critically identifying how
+                        engineering decisions affect the user experience through the lens of Human-Computer interaction.
+                    </p>
+                </div>
+                <div id="cs152" class="course day">
+                    <img src="./assets/lambda.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">CS152 @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Programming Language (Theory)</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Learned foundations of Programming Language Theory including syntax, formal semantics,
+                        abstraction mechanisms, lambda calculus, modularity, type systems, naming, polymorphism,
+                        closures, continuations,
+                        and concurrency.
+                    </p>
+                </div>
+                <div id="cs61" class="course day">
+                    <img src="./assets/systems-coursepic.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">CS61 @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Systems Programming and Machine Organization</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Learned about data representation in computer memory,
+                        assembly, how data is moved across reigsters, process
+                        control, kernel interaction, virtual memory, caching,
+                        system calls, the shell, and debugging through a
+                        semester-long series of interactive problem-sets.
+                    </p>
+                </div>
+                <div id="cs121" class="course day">
+                    <img src="./assets/turing.gif" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">CS121 @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Theory of Computation</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Learned about turing machines, different models of computation, logic and satisfiability,
+                        randomized algorithms, P & NP, and other common topics in Theoretical Computer Science.
+                    </p>
+                </div>
                 <div id="math21b" class="course day">
-                    <img src="images/lin-alg-coursepic.png" alt="" class="course-thumbnail">
-                    <h4 class = "course-title section-subtitle day">Math 21B @ Harvard</h4>
-                    <h6 class = "course-subtitle section-subtitle day">Linear Algebra and Differential Equations</h6>
+                    <img src="./assets/lin-alg-coursepic.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">Math 21B @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Linear Algebra and Differential Equations</h6>
                     <hr style="width: 85%;
                     margin-bottom: 5px;">
                     <p class="course-info section-desc day">
@@ -166,9 +256,9 @@
                     </p>
                 </div>
                 <div id="stat110" class="course day">
-                    <img src="images/stat-coursepic.png" alt="" class="course-thumbnail">
-                    <h4 class = "course-title section-subtitle day">STAT110 @ Harvard</h4>
-                    <h6 class = "course-subtitle section-subtitle day">Probability</h6>
+                    <img src="./assets/stat-coursepic.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">STAT110 @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Probability</h6>
                     <hr style="width: 85%;
                     margin-bottom: 5px;">
                     <p class="course-info section-desc day">
@@ -181,9 +271,9 @@
                     </p>
                 </div>
                 <div id="math1b" class="course day">
-                    <img src="images/calculus-coursepic.png" alt="" class="course-thumbnail">
-                    <h4 class = "course-title section-subtitle day">Math 1B @ Harvard</h4>
-                    <h6 class = "course-subtitle section-subtitle day">Calculus, Series, and Differential Equations</h6>
+                    <img src="./assets/calculus-coursepic.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">Math 1B @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Calculus, Series, and Differential Equations</h6>
                     <hr style="width: 85%;
                     margin-bottom: 5px;">
                     <p class="course-info section-desc day">
@@ -193,22 +283,371 @@
                         to represent functions as power series.
                     </p>
                 </div>
+                <div id="econ1010b" class="course day">
+                    <img src="./assets/macroecon.jpg" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">ECON1010B @ Harvard</h4>
+                    <h6 class="course-subtitle section-subtitle day">Intermediate Macroeconomics</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Learned macroeconomic models, exploring concepts such as the monetary system, inflation, open
+                        economy dynamics, unemployment and the labor market, capital accumulation and growth (Solow
+                        model), population growth, and technological policy. Additionally, we studied fluctuations and
+                        business cycles, aggregate demand, the Mundell-Fleming model, and aggregate supply, gaining a
+                        comprehensive understanding of macroeconomic principles and their real-world applications.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="page-wrapper skills day">
-            skills
-        </div>
         <div class="page-wrapper experience day">
-            experience
+            <div id="experience-header" class="page-headers">
+                <h1 id="experience-title" class="section-title experience-sections day">👔Experience</h1>
+            </div>
+            <hr class="section-subtitle day" style="width:80%; margin-bottom: 30px;">
+            <div class="courses-wrapper">
+                <div id="meta2023" class="course day">
+                    <img src="./assets/meta2023.jpg" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">Software Engineering Intership @ Meta</h4>
+                    <h6 class="course-subtitle section-subtitle day">Menlo Park, CA <br>(May 2023 - August 2023)
+                    </h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Developed a new feature for the iOS app for Meta Ray-Ban Stories Smart Glasses utilizing Swift,
+                        Xcode, and the Combine framework within the MVC architecture.
+                    </p>
+                </div>
+                <div id="meta2022" class="course day">
+                    <img src="./assets/meta2022.jpg" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">Meta University iOS Intership @ Meta</h4>
+                    <h6 class="course-subtitle section-subtitle day">Seattle, WA<br>(June 2022 - August 2022)
+                    </h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Developed a capstone iOS project using Objective-C and Xcode, implementing the MVC architecture.
+                        Gained expertise in integrating external libraries into iOS apps while receiving mentorship on
+                        industry-standard practices such as project management, code reviews, stand-ups, collaboration,
+                        and version control.
+                    </p>
+                </div>
+                <div id="azara2021" class="course day">
+                    <img src="./assets/azara2021.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">Software Engineering Internship @ Azara Healthcare
+                    </h4>
+                    <h6 class="course-subtitle section-subtitle day">Burlington, MA<br>(June 2021 - August 2021)
+                    </h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Developed a usage dashboard for visual analytics using asynchronous methods. Collaborated in an
+                        agile team to optimize SaaS web applications for community health centers nationwide with
+                        solutions for tracking patient needs and storing information in databases. Utilized
+                        .NET Framework, C#, LINQ, SQL, HTML, CSS, and JS in Visual Studio with an MVC design pattern.
+                        Engaged in code reviews, stand-up meetings, and project tracking with Jira.
+                    </p>
+                </div>
+                <div id="t4sg2021" class="course day">
+                    <img src="./assets/t4sglogo.jpg" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">UX Designer @ Harvard Computer Society : Tech For
+                        Social Good
+                    </h4>
+                    <h6 class="course-subtitle section-subtitle day">Cambridge, MA<br>(Feb 2021 - May 2021)
+                    </h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Created a centralized evidence management system for Human Rights Watch, enabling digital
+                        tracking and storage of evidence for researchers. Gained proficiency in Figma and acquired UI/UX
+                        principles through design sprints utilizing the double-diamond research model. Conducted user
+                        interviews, usability tests, and crafted lo-fi and hi-fi prototypes based on user personas.
+                    </p>
+                </div>
+                <div id="dlf" class="course day">
+                    <img src="./assets/dlfthumb.jpg" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">Digital Media @ Diztaen Legacy Foundation
+                    </h4>
+                    <h6 class="course-subtitle section-subtitle day">Based in Benin City, Nigeria<br>(May 2021 -
+                        Present)
+                    </h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+
+                        Designed the logo for Diztaen Legacy Foundation, a charitable organization in Benin City,
+                        Nigeria, focused on aiding widows and orphans.
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="page-wrapper projects day">
-            projects
+            <div id="projects-header" class="page-headers">
+                <h1 id="projects-title" class="section-title projects-sections day">📱Software Projects</h1>
+
+            </div>
+            <hr class="section-subtitle day" style="width:80%; margin-bottom: 30px;">
+            <div class="courses-wrapper">
+                <div id="centrality" class="course day">
+                    <video autoplay muted controls>
+                        <source src="./assets/centrality_demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h4 class="course-title section-subtitle day">Centrality iOS</h4>
+                    <h6 class="course-subtitle section-subtitle day">Productivity iOS app made with Objective-C</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Mobile productivity app built as part of the Meta University iOS Engineering internship.
+                        Centrality is
+                        targeted towards students, working professionals, and productivity lovers. This
+                        app was inspired by the Todoist app, and includes functionalities such as collaborative tasks, a
+                        usage dashboard, filtering and category options, etc.
+                        <br>
+                        <a href="https://github.com/sosaagbontaen/centrality-ios/tree/main">Code and Demo available
+                            here</a>
+                    </p>
+                </div>
+                <div id="betterbus" class="course day">
+                    <!-- <img src="./assets/abstraction-coursepic.jpg" alt="" class="course-thumbnail"> -->
+                    <video autoplay muted controls>
+                        <source src="./assets/betterbus_demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h4 class="course-title section-subtitle day">Betterbus</h4>
+                    <h6 class="course-subtitle section-subtitle day">Campus Transit App made with react.js</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Created a campus transit web app using react.js and the Google Maps API. This was built as part
+                        of an assignment to upgrade Harvard's existing transit app.
+                        <br>
+                        <a href="https://drive.google.com/file/d/1jDWPD2Nu0Bn5qWrcdmPReBDAsigfFaX4/view">Demo available
+                            here</a>
+                    </p>
+                </div>
+                <div id="beachbrawl" class="course day">
+                    <video id="beachbrawl_video" autoplay muted controls>
+                        <source src="./assets/beach_brawl_demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h4 class="course-title section-subtitle day">BeachBrawl</h4>
+                    <h6 class="course-subtitle section-subtitle day">Unity Game developed in C#</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Unity game created as a final project for Harvard's CS175 (Computer Graphics) course.
+                        Students were encouraged to adapt a popular game by adding a creative spin. I chose to take the
+                        concept of space invaders, but extend it to a three dimensional world, while fighting enemies
+                        (sharks and missles) in two planes (by sea and by air).
+                        <br>
+                        <a href="https://drive.google.com/file/d/1G4Q51pnRqIJO5gkQ5yeLaS8QIy8xq2fl/view?usp=sharing">Demo
+                            available
+                            here</a>
+                    </p>
+                </div>
+                <div id="ilingual" class="course day">
+                    <img src="./assets/iLingualLogo.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">iLingual.ai </h4>
+                    <h6 class="course-subtitle section-subtitle day">A.I.powered translation app made with react.js,
+                        Flask, GPT-4, and Figma</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        A translation app that leverages GPT-4 to provide users with more contextual and accurate
+                        translations (ex. Regional dialects, situational, and logical context). This was a group final
+                        project for Harvard’s CS178 (Engineering Usable Interactive Systems) and was built using react
+                        JS, Flask, GPT-4’s API, and designed with Figma.
+
+                        <br>
+                        <a href="https://drive.google.com/file/d/1CvGyCO0hYmPWEa-73hV4Rp4J2CR_fnn7/view?usp=sharing">Demo
+                            available
+                            here</a>
+                    </p>
+                </div>
+                <div id="datavizproj" class="course day">
+                    <!-- <img src="./assets/abstraction-coursepic.jpg" alt="" class="course-thumbnail"> -->
+                    <video autoplay muted controls>
+                        <source src="./assets/datavizproj.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h4 class="course-title section-subtitle day">Data Visualization Analysis of Educational Success
+                        in the United States </h4>
+                    <h6 class="course-subtitle section-subtitle day">d3.js Visualization project</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Data visualization project made using d3.js that examines the causes of educational success in
+                        colleges across the United States. Using
+                        data from the U.S. Department of Education’s College Scorecard from the 2015-2016 school year.
+                        This was a group final project for Harvard's CS171 (Data Visualization) course
+                        <br>
+                        <a href="https://omarwahby.github.io/CS171-Final-Project/#title_anchor">Demo
+                            available
+                            here</a>
+                    </p>
+                </div>
+                <div id="productivitypanther" class="course day">
+                    <!-- <img src="./assets/abstraction-coursepic.jpg" alt="" class="course-thumbnail"> -->
+                    <video autoplay muted controls>
+                        <source src="./assets/prodpanther.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h4 class="course-title section-subtitle day">Productivity Panther</h4>
+                    <h6 class="course-subtitle section-subtitle day">Pomodoro Timer Webpage made with HTML/CSS/JS</h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Pomodoro Timer webpage built using HTML, CSS, and Javascript. This was built as part of a final
+                        project for Harvard's CS50 (Intro to Computer Science) course.
+                        <br>
+                        <a href="https://sosaagbontaen.github.io/productivitypanther/">Demo
+                            available
+                            here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper creative day">
+            <div id="creative-header" class="page-headers">
+                <h1 id="creative-title" class="section-title creative-sections day">🎨Creative Projects</h1>
+            </div>
+            <hr class="section-subtitle day" style="width:80%; margin-bottom: 30px;">
+            <div class="courses-wrapper">
+                <div id="chinesesong" class="course day">
+                    <img src="./assets/chinesethumb2.png" alt="" class="course-thumbnail">
+                    <h4 class="course-title section-subtitle day">Chinese Rap Music Video - 学生生活</h4>
+                    <h6 class="course-subtitle section-subtitle day">Won "Best Original/Adapted Song" @ Harvard
+                        Chinese
+                        Film Fest
+                    </h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Wrote and recorded a rap music video in Chinese. This video was <b>awarded "Best
+                            Original/Adapted
+                            Song" at Harvard's annual Chinese Film Fest</b>.
+                        <br>
+                        <a href="https://drive.google.com/file/d/1ZUsXNkBVFqcC48qX68qyKSiS4P8pIhzD/view?usp=sharing">Full
+                            video can be viewed
+                            here
+                            here</a>
+                    </p>
+                </div>
+                <div id="qhd2022" class="course day">
+                    <img src="./assets/qhd22thumb.png" alt="" class="course-thumbnail">
+
+                    <h4 class="course-title section-subtitle day">Harvard College Music Video : Quincy Housing Day
+                        2022</h4>
+                    <h6 class="course-subtitle section-subtitle day">Co-Directed 2022 music video for Harvard's Quincy
+                        House.
+                    </h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Co-Directed a half-semester long music-video project for my Harvard-house community as part of
+                        an annual tradition where each house makes a video. <b>Won best Housing Day video of 2022 <a
+                                href="https://www.thecrimson.com/flyby/article/2022/3/21/2022-housing-day-video-ranking/">according
+                                to
+                                Harvard Crimson's FlyBy blog</a></b>. Gained over <b>12,000 views on YouTube</b>.
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=rx3IhL39ZPs">Full
+                            video can be viewed
+                            here
+                            here</a>
+                    </p>
+                </div>
+                <div id="qhd2023" class="course day">
+                    <img src="./assets/qhd23thumb.png" alt="" class="course-thumbnail">
+
+                    <h4 class="course-title section-subtitle day">Harvard College Music Video : Quincy Housing Day
+                        2023</h4>
+                    <h6 class="course-subtitle section-subtitle day">Co-Directed 2023 music video for Harvard's Quincy
+                        House. The sequel!
+                    </h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Co-Directed a half-semester long music-video project for my Harvard-house community as part of
+                        an annual tradition where each house makes a video. Gained over <b>11,000 views on YouTube</b>.
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=a7dLZhl2aD4">Full
+                            video can be viewed
+                            here
+                            here</a>
+                    </p>
+                </div>
+                <div id="qhd2024" class="course day">
+                    <img src="./assets/qhd24thumb.jpg" alt="" class="course-thumbnail">
+
+                    <h4 class="course-title section-subtitle day">Harvard College Music Video : Quincy Housing Day
+                        2024</h4>
+                    <h6 class="course-subtitle section-subtitle day">Co-Directed 2024 music video for Harvard's Quincy
+                        House. The trilogy!
+                    </h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Co-Directed a half-semester long music-video project for my Harvard-house community as part of
+                        an annual tradition where each house makes a video. <b>The video was well received by the music
+                            video director for Drake and
+                            J Cole's video "First Person Shooter"</b> (which our video was based on).
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=QhKnkfdVd2k">Full
+                            video can be viewed
+                            here
+                            here</a>
+                    </p>
+                </div>
+                <div id="zhreamz" class="course day">
+                    <img src="./assets/zhreamzvid1.png" alt="" class="course-thumbnail">
+
+                    <h4 class="course-title section-subtitle day">Taking the First Step</h4>
+                    <h6 class="course-subtitle section-subtitle day">Creative video challenge
+                    </h6>
+                    <hr style="width: 85%;
+                    margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Participated in a 5-hour challenge to build a brand new YouTube channel and create a pilot video
+                        from scratch. The channel logo and video thumbnail (designed in Adobe Photoshop), the pilot
+                        video (edited in Capcut), the narration (generated with voice ai), and the pictures used in the
+                        video (also generated with image ai), were all created within the slot of the 5 hour challenge.
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=QhKnkfdVd2k">Full
+                            video can be viewed
+                            here
+                            here</a>
+                    </p>
+                </div>
+                <div id="wisdomwall" class="course day">
+                    <img src="./assets/wisdomwall.jpg" alt="" class="course-thumbnail">
+
+                    <h4 class="course-title section-subtitle day">Wisdom Wall</h4>
+                    <h6 class="course-subtitle section-subtitle day">Personal Creative Outlet
+                    </h6>
+                    <hr style="width: 85%;
+                        margin-bottom: 5px;">
+                    <p class="course-info section-desc day">
+                        Over 1,000 sticky notes of accumulated wisdom from lessons I've learned, conversations I've had,
+                        and
+                        any other type of wisdom I've encountered since 2020.
+                        <br>
+                        <a href="https://drive.google.com/file/d/1Q8om-wd8U_fUB8tpk8YvH97jJDWJ3KdK/view?usp=sharing">A
+                            brief explanation of this practice can be found here</a>
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="page-wrapper contact day">
-            contact
+            <div id="contact-header" class="page-headers">
+                <h1 id="contact-title" class="section-title contact-sections day">📞Resume & Contact</h1>
+            </div>
+            <hr class="section-subtitle day" style="width:80%; margin-bottom: 30px;">
+            <iframe src="./assets/Samuel_Osa-Agbontaen_Resume.pdf" width="100%" height="600px"></iframe>
+
         </div>
     </div>
     <!--Using my JS scripts-->
-    <script src="script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
+
 </html>
