@@ -43,6 +43,7 @@
             <div class="side-nav-item" data-section="projects">
                 <span class="side-nav-label">Projects</span>
                 <div class="side-nav-dot"></div>
+                <div class="side-nav-sub-item"><a href="#project-dumpnotes">DumpNotes</a></div>
                 <div class="side-nav-sub-item"><a href="#project-sprintrivals">Sprint Rivals</a></div>
                 <div class="side-nav-sub-item"><a href="#project-gemnight">GemNight</a></div>
                 <div class="side-nav-sub-item"><a href="#project-traceback">TR4CEB4CK</a></div>
@@ -173,6 +174,39 @@
 
         <section id="projects">
             <h2>📱 Projects</h2>
+
+            <div class="project has-media" id="project-dumpnotes">
+                <div class="project-content">
+                    <div class="project-name">DumpNotes</div>
+                    <div class="project-desc">A native iOS voice journal. Talk about your day for as long as you
+                        like, jumping between subjects, and it transcribes the recording and arranges it into an
+                        organized entry: related thoughts grouped under headings, filler left out, and your exact
+                        words kept behind every section. Built AI-first with Claude Code: a SwiftUI and SwiftData app
+                        backed by a FastAPI service that transcribes with Whisper and organizes with an LLM in two
+                        passes, plus a guard that checks every spoken line is accounted for. The journal is stored on
+                        the phone with no account. Recording keeps going in the background with a Lock Screen timer
+                        and is saved in pieces as you talk, photos can be imported in bulk and sorted by the day they
+                        were taken, and entries can sync to Notion. In personal use ahead of an App Store
+                        release.</div>
+                    <div class="project-tech">
+                        <span class="tech">Swift</span>
+                        <span class="tech">SwiftUI</span>
+                        <span class="tech">SwiftData</span>
+                        <span class="tech">AVFoundation</span>
+                        <span class="tech">Python</span>
+                        <span class="tech">FastAPI</span>
+                        <span class="tech">Whisper (Groq)</span>
+                        <span class="tech">gpt-oss (LLM)</span>
+                        <span class="tech">Notion API</span>
+                        <span class="tech">Render (Deployed)</span>
+                        <span class="tech">Claude Code</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sosaagbontaen/codename_promise" class="project-link" target="_blank" rel="noopener noreferrer">💻 Code</a>
+                    </div>
+                </div>
+                <div class="project-media"><img src="assets/dumpnotes_demo.png" alt="DumpNotes: recording, the raw transcript, and the arranged entry"></div>
+            </div>
 
             <div class="project has-media" id="project-sprintrivals">
                 <div class="project-content">
