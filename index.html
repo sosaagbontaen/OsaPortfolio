@@ -43,6 +43,7 @@
             <div class="side-nav-item" data-section="projects">
                 <span class="side-nav-label">Projects</span>
                 <div class="side-nav-dot"></div>
+                <div class="side-nav-sub-item"><a href="#project-quickkey">QuickKey</a></div>
                 <div class="side-nav-sub-item"><a href="#project-codenamesleep">Codename Sleep</a></div>
                 <div class="side-nav-sub-item"><a href="#project-dumpnotes">DumpNotes</a></div>
                 <div class="side-nav-sub-item"><a href="#project-sprintrivals">Sprint Rivals</a></div>
@@ -174,6 +175,35 @@
 
         <section id="projects">
             <h2>📱 Projects</h2>
+
+            <div class="project has-media" id="project-quickkey">
+                <div class="project-content">
+                    <div class="project-name">QuickKey</div>
+                    <div class="project-desc">A plugin that turns repeated Premiere Pro operations into single
+                        keystrokes. Applying a blur normally means finding the Effects panel, searching it, dragging
+                        the effect onto a clip, then opening Effect Controls to adjust it &mdash; about seven actions,
+                        thousands of times a project. QuickKey makes it one, applied to whatever clip is selected,
+                        using settings captured from a clip you already dialled in rather than Premiere&rsquo;s defaults.
+                        It also does things Premiere has no command for at all, like un-nesting a sequence.<br><br>
+                        The interesting part is architectural. Premiere&rsquo;s documented API knows which clip is
+                        selected but cannot apply effects; an undocumented internal layer can apply effects but has no
+                        concept of selection. QuickKey is the bridge between them. Keyboard capture runs outside
+                        Premiere entirely, as a Swift background agent, because the host gives plugins no way to claim
+                        a keystroke. Built AI-first with Claude Code, and currently in private testing with a
+                        co-founder who edits professionally.</div>
+                    <div class="project-tech">
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">Adobe CEP</span>
+                        <span class="tech">ExtendScript</span>
+                        <span class="tech">Premiere Pro</span>
+                        <span class="tech">Swift</span>
+                        <span class="tech">macOS</span>
+                        <span class="tech">Carbon</span>
+                        <span class="tech">Claude Code</span>
+                    </div>
+                </div>
+                <div class="project-media"><img src="assets/quickkey_demo.png" alt="QuickKey &mdash; the panel docked in Premiere, and the panel in detail"></div>
+            </div>
 
             <div class="project has-media" id="project-codenamesleep">
                 <div class="project-content">
