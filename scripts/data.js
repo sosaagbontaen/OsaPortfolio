@@ -399,7 +399,7 @@ window.TIMELINE = [
       cta: "Join the waitlist at sprintrivals.com",
       ctaShort: "Join the waitlist",
       stats: [["350+", "on the waitlist"], ["46", "countries"], ["100K+", "social views"]],
-      note: "Built from zero in two weeks, before launch, with interest from top track athletes."
+      note: "Built from zero before launch, with interest from top track athletes."
     },
     icon: "assets/proj/sprint-icon.png",
     image: "assets/sprint_rivals.jpg",
