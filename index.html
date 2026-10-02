@@ -5,420 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuel Osa-Agbontaen</title>
+    <meta name="description" content="Software engineer. Harvard CS '24, formerly Coalition and Meta, now building apps AI-first.">
+    <meta name="theme-color" content="#090d16">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <canvas id="matrix-bg"></canvas>
-
-    <div class="boot-sequence">
-        <div class="boot-text">> Initializing system...</div>
-        <div class="boot-text">> Loading portfolio...</div>
-        <div class="boot-text">> Establishing connection...</div>
-        <div class="boot-text">> System ready</div>
-        <div class="access-granted">[ ACCESS GRANTED ]</div>
-    </div>
-
-    <div class="container">
-        <header>
-            <div class="profile-photo"><img src="assets/tr4ceback.png" alt="Photo of Samuel Osa-Agbontaen"></div>
-            <div>
-                <div class="name">samuel_osa-agbontaen/<span class="cursor"></span></div>
-                <div class="tagline">🛠️ Digital Builder & Problem Solver 🧠</div>
-                <div class="education">Computer Science, A.B. • Harvard University '24</div>
-            </div>
-        </header>
-
-        <!-- Side Navigation -->
-        <nav class="side-nav">
-            <div class="side-nav-item" data-section="experience">
-                <span class="side-nav-label">Experience</span>
-                <div class="side-nav-dot"></div>
-                <div class="side-nav-sub-item"><a href="#job-coalition">Coalition</a></div>
-                <div class="side-nav-sub-item"><a href="#job-meta-2023">Meta (2023)</a></div>
-                <div class="side-nav-sub-item"><a href="#job-meta-2022">Meta (2022)</a></div>
-                <div class="side-nav-sub-item"><a href="#job-azara-2021">Azara (2021)</a></div>
-                <div class="side-nav-sub-item"><a href="#job-t4sg-2021">T4SG (2021)</a></div>
-            </div>
-            <div class="side-nav-item" data-section="projects">
-                <span class="side-nav-label">Projects</span>
-                <div class="side-nav-dot"></div>
-                <div class="side-nav-sub-item"><a href="#project-quickkey">QuickKey</a></div>
-                <div class="side-nav-sub-item"><a href="#project-codenamesleep">Codename Sleep</a></div>
-                <div class="side-nav-sub-item"><a href="#project-dumpnotes">DumpNotes</a></div>
-                <div class="side-nav-sub-item"><a href="#project-sprintrivals">Sprint Rivals</a></div>
-                <div class="side-nav-sub-item"><a href="#project-leetlog">Leetlog</a></div>
-                <div class="side-nav-sub-item"><a href="#project-gemnight">GemNight</a></div>
-                <div class="side-nav-sub-item"><a href="#project-centrality">Centrality iOS</a></div>
-                <div class="side-nav-sub-item"><a href="#project-ilingual">iLingual.ai</a></div>
-                <div class="side-nav-sub-item"><a href="#project-beachbrawl">BeachBrawl</a></div>
-            </div>
-            <div class="side-nav-item" data-section="contact">
-                <span class="side-nav-label">Contact</span>
-                <div class="side-nav-dot"></div>
-            </div>
+    <header class="top">
+        <nav class="top-links" aria-label="Links">
+            <a href="https://docs.google.com/document/d/1e9oXwRbos4srqYezNB6YPxI8x_D3UBXKy3oJ2n3dcGg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume" data-tip="Resume">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6M9 9h2"/></svg></a>
+            <a href="https://www.linkedin.com/in/samuel-osa-agbontaen" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-tip="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a href="https://github.com/sosaagbontaen" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tip="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57l-.02-2.04c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg></a>
+            <a href="mailto:soagbontaen@gmail.com" aria-label="Email" data-tip="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></a>
         </nav>
+        <a class="status" href="#/next"><span class="pulse"></span>Open to opportunities</a>
+    </header>
 
-        <nav>
-            <a href="#experience">👔 Experience</a>
-            <a href="#projects">📱 Projects</a>
-            <a href="#contact">🤝 Let's Connect</a>
-        </nav>
+    <section class="hero">
+        <div class="sky" aria-hidden="true"><div class="glow"></div><div class="stars"></div><div class="ridge far"></div><div class="ridge"></div></div>
+        <div class="hero-photo" aria-hidden="true"><img src="assets/me/night.jpg" alt=""></div>
+        <div class="hero-copy">
+            <p class="kicker">Samuel Osa-Agbontaen<br>Software engineer &nbsp;/&nbsp; Builder</p>
+            <h1>Building, learning,<br>and creating <em>what&rsquo;s next.</em></h1>
+            <p class="lede">From Harvard to Meta, Coalition, and now apps of my own: a timeline of what I&rsquo;ve worked on,
+                what I&rsquo;ve built, and what I learned along the way.</p>
+            <a class="explore" href="#journey"><span></span>Explore my journey <b>&#8964;</b></a>
+        </div>
+    </section>
 
-        <section id="experience">
-            <h2>👔 Experience</h2>
+    <main class="journey" id="journey">
+        <nav class="index" id="index" aria-label="Journey index"></nav>
+        <section class="tl" id="tl" aria-label="Timeline"></section>
+        <aside class="panel-wrap"><div class="panel" id="panel" aria-live="polite"></div></aside>
+    </main>
 
-            <div class="job" id="job-coalition">
-                <div class="company-logo"><img src="assets/coalitioninc_logo.jpeg" alt="Coalition Inc."></div>
-                <div class="job-content">
-                    <div class="job-header">
-                        <div class="job-title">Software Engineer</div>
-                        <div class="job-date">January 2025 - Present</div>
-                    </div>
-                    <div class="company">Coalition Inc.</div>
-                    <div class="location">San Francisco, CA (Remote) & International</div>
-                    <ul class="job-desc">
-                        <li>Designed and deployed REST APIs and microservices for a global insurance platform
-                            (Python/Flask, Golang, PostgreSQL, gRPC).</li>
-                        <li>Led technical implementation for international expansion (Australia and Canada, including
-                            English and French locales); managed cross-team coordination and application versioning.
-                        </li>
-                        <li>Drove infrastructure upgrades, including database migrations and a major email
-                            system migration (Mandrill → Mailgun).</li>
-                        <li>Served as primary on-call engineer: led incident investigations and implemented proactive
-                            fixes.</li>
-                        <li>Authored technical documentation and operational runbooks.</li>
-                        <li>Revived and maintained monthly team social events.</li>
-                        <li>Participated in code reviews and mentored peers on debugging best practices.</li>
-                    </ul>
-                </div>
-            </div>
+    <footer class="foot">
+        <p class="foot-line">From ideas <em>to impact.</em></p>
+        <nav class="top-links foot-links" aria-label="Contact">
+                <a href="https://docs.google.com/document/d/1e9oXwRbos4srqYezNB6YPxI8x_D3UBXKy3oJ2n3dcGg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume" data-tip="Resume">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6M9 9h2"/></svg></a>
+                <a href="https://www.linkedin.com/in/samuel-osa-agbontaen" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-tip="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+                <a href="https://github.com/sosaagbontaen" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tip="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57l-.02-2.04c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg></a>
+                <a href="mailto:soagbontaen@gmail.com" aria-label="Email" data-tip="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></a>
+            </nav>
+    </footer>
 
-            <div class="job" id="job-meta-2023">
-                <div class="company-logo"><img src="assets/meta-white.png" alt="Meta"></div>
-                <div class="job-content">
-                    <div class="job-header">
-                        <div class="job-title">Software Engineering Intern (iOS)</div>
-                        <div class="job-date">May 2023 - August 2023</div>
-                    </div>
-                    <div class="company">Meta</div>
-                    <div class="location">Menlo Park, CA</div>
-                    <ul class="job-desc">
-                        <li>Developed a preview feature for the Meta Ray-Ban Smart Glasses iOS app using Swift, Xcode,
-                            and the Combine framework in an MVVM architecture</li>
-                        <li>Enabled users to preview their captures before importing, reducing wait times and minimizing
-                            unnecessary imports</li>
-                    </ul>
-                </div>
-            </div>
+    <dialog class="detail" id="detail" aria-labelledby="d-title">
+        <aside class="d-side" id="d-side"></aside>
+        <div class="d-main" id="d-main"></div>
+    </dialog>
 
-            <div class="job" id="job-meta-2022">
-                <div class="company-logo"><img src="assets/meta-white.png" alt="Meta"></div>
-                <div class="job-content">
-                    <div class="job-header">
-                        <div class="job-title">Software Engineering Intern (iOS)</div>
-                        <div class="job-date">June 2022 - August 2022</div>
-                    </div>
-                    <div class="company">Meta</div>
-                    <div class="location">Seattle, WA</div>
-                    <ul class="job-desc">
-                        <li>Led the end-to-end development of a capstone iOS project using Objective-C and Xcode,
-                            applying MVC architecture</li>
-                        <li>Owned the entire lifecycle, from wireframing and roadmapping to prototyping, coding, and
-                            demoing the final product</li>
-                        <li>Integrated external libraries and adhered to industry standards in project management, code
-                            reviews, and version control</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="job" id="job-azara-2021">
-                <div class="company-logo"><img src="assets/azara2021.png" alt="Azara Healthcare"></div>
-                <div class="job-content">
-                    <div class="job-header">
-                        <div class="job-title">Full-Stack Software Engineering Intern</div>
-                        <div class="job-date">June 2021 - August 2021</div>
-                    </div>
-                    <div class="company">Azara Healthcare</div>
-                    <div class="location">Burlington, MA</div>
-                    <ul class="job-desc">
-                        <li>Built a usage dashboard that asynchronously displays visual analytics of health centers
-                            nationwide using SaaS to track patient needs and store information in databases</li>
-                        <li>Worked in .NET Framework in Visual Studio using C# with LINQ, SQL on the backend and HTML,
-                            CSS, JS on the frontend, within an MVC design pattern</li>
-                        <li>Introduced Figma to the company as an efficient UI/UX design solution</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="job" id="job-t4sg-2021">
-                <div class="company-logo"><img src="assets/t4sg.jpeg" alt="Harvard T4SG"></div>
-                <div class="job-content">
-                    <div class="job-header">
-                        <div class="job-title">UI/UX Designer & Researcher</div>
-                        <div class="job-date">February 2021 - May 2021</div>
-                    </div>
-                    <div class="company">Harvard Computer Society: Tech For Social Good</div>
-                    <div class="location">Cambridge, MA</div>
-                    <ul class="job-desc">
-                        <li>Designed a centralized evidence management system for Human Rights Watch to allow
-                            researchers to digitally track and store evidence</li>
-                        <li>Gained proficiency with Figma and learned UI/UX principles through regular design sprints
-                            that utilized the double-diamond research model</li>
-                        <li>Conducted multiple user interviews, usability tests, and created lo-fi and hi-fi prototypes
-                            based on user personas</li>
-                    </ul>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="projects">
-            <h2>📱 Projects</h2>
-
-            <div class="project has-media" id="project-quickkey">
-                <div class="project-content">
-                    <div class="project-name">QuickKey</div>
-                    <div class="project-desc">A plugin that turns repeated Premiere Pro operations into single
-                        keystrokes. Applying a blur normally means finding the Effects panel, searching it, dragging
-                        the effect onto a clip, then opening Effect Controls to adjust it &mdash; about seven actions,
-                        thousands of times a project. QuickKey makes it one, applied to whatever clip is selected,
-                        using settings captured from a clip you already dialled in rather than Premiere&rsquo;s defaults.
-                        It also does things Premiere has no command for at all, like un-nesting a sequence.<br><br>
-                        The interesting part is architectural. Premiere&rsquo;s documented API knows which clip is
-                        selected but cannot apply effects; an undocumented internal layer can apply effects but has no
-                        concept of selection. QuickKey is the bridge between them. Keyboard capture runs outside
-                        Premiere entirely, as a Swift background agent, because the host gives plugins no way to claim
-                        a keystroke. Built AI-first with Claude Code, and currently in private testing with a
-                        co-founder who edits professionally.</div>
-                    <div class="project-tech">
-                        <span class="tech">JavaScript</span>
-                        <span class="tech">Adobe CEP</span>
-                        <span class="tech">ExtendScript</span>
-                        <span class="tech">Premiere Pro</span>
-                        <span class="tech">Swift</span>
-                        <span class="tech">macOS</span>
-                        <span class="tech">Carbon</span>
-                        <span class="tech">Claude Code</span>
-                    </div>
-                </div>
-                <div class="project-media"><img src="assets/quickkey_demo.png" alt="QuickKey &mdash; the panel docked in Premiere, and the panel in detail"></div>
-            </div>
-
-            <div class="project has-media" id="project-codenamesleep">
-                <div class="project-content">
-                    <div class="project-name">Codename Sleep</div>
-                    <div class="project-desc">An iOS app for night owls who keep staying up later than they mean to.
-                        At bedtime it locks your chosen apps until you explain (photo, voice, or text) why you're
-                        still awake, then shows you a morning replay of what the late night cost and turns your 2am
-                        ideas into a plan for tomorrow. Working prototype with personalized onboarding, sleep
-                        insights, and Screen Time–based app locking; in progress.</div>
-                    <div class="project-tech">
-                        <span class="tech">Swift</span>
-                        <span class="tech">SwiftUI</span>
-                        <span class="tech">Screen Time API (FamilyControls, DeviceActivity)</span>
-                        <span class="tech">Swift Charts</span>
-                        <span class="tech">AVFoundation</span>
-                        <span class="tech">EventKit</span>
-                    </div>
-                </div>
-                <div class="project-media"><img src="assets/codename_sleep_demo.jpg" alt="Codename Sleep"></div>
-            </div>
-
-            <div class="project has-media" id="project-dumpnotes">
-                <div class="project-content">
-                    <div class="project-name">DumpNotes</div>
-                    <div class="project-desc">A native iOS voice journal. Talk about your day for as long as you
-                        like, jumping between subjects, and it transcribes the recording and arranges it into an
-                        organized entry: related thoughts grouped under headings, filler left out, and your exact
-                        words kept behind every section. Built AI-first with Claude Code: a SwiftUI and SwiftData app
-                        backed by a FastAPI service that transcribes with Whisper and organizes with an LLM in two
-                        passes, plus a guard that checks every spoken line is accounted for. The journal is stored on
-                        the phone with no account. Recording keeps going in the background with a Lock Screen timer
-                        and is saved in pieces as you talk, photos can be imported in bulk and sorted by the day they
-                        were taken, and entries can sync to Notion. In personal use ahead of an App Store
-                        release.</div>
-                    <div class="project-tech">
-                        <span class="tech">Swift</span>
-                        <span class="tech">SwiftUI</span>
-                        <span class="tech">SwiftData</span>
-                        <span class="tech">AVFoundation</span>
-                        <span class="tech">Python</span>
-                        <span class="tech">FastAPI</span>
-                        <span class="tech">Whisper (Groq)</span>
-                        <span class="tech">gpt-oss (LLM)</span>
-                        <span class="tech">Notion API</span>
-                        <span class="tech">Render (Deployed)</span>
-                        <span class="tech">Claude Code</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/sosaagbontaen/codename_promise" class="project-link" target="_blank" rel="noopener noreferrer">💻 Code</a>
-                    </div>
-                </div>
-                <div class="project-media"><img src="assets/dumpnotes_demo.png" alt="DumpNotes: recording, the raw transcript, and the arranged entry"></div>
-            </div>
-
-            <div class="project has-media" id="project-sprintrivals">
-                <div class="project-content">
-                    <div class="project-name">Sprint Rivals</div>
-                    <div class="project-desc">A 3D sprint-racing game for iPhone where you race the 60m, 100m, 200m,
-                        and 400m against a field of eight. You control your runner with a two-thumb rhythm mechanic,
-                        dip at the finish, then watch the race back from the broadcast camera or first person and
-                        save clips to share.</div>
-                    <div class="project-desc">I built it AI-first with Claude Code, using SwiftUI and SceneKit with a
-                        Python/Blender pipeline for customizable athletes, plus Game Center leaderboards and dynamic
-                        indoor and outdoor venues. I started building an audience before launch from zero, reaching a
-                        310-person waitlist across 40 countries in two weeks, with posts reaching 40K views and
-                        interest from top track athletes.</div>
-                    <div class="project-tech">
-                        <span class="tech">Swift</span>
-                        <span class="tech">SwiftUI</span>
-                        <span class="tech">SceneKit / Metal</span>
-                        <span class="tech">AVFoundation</span>
-                        <span class="tech">GameKit</span>
-                        <span class="tech">Python</span>
-                        <span class="tech">Blender</span>
-                        <span class="tech">Cloudflare Workers</span>
-                        <span class="tech">Claude Code</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://sprintrivals.com/" class="project-link" target="_blank" rel="noopener noreferrer">🏁 Join the Waitlist</a>
-                    </div>
-                </div>
-                <div class="project-media"><img src="assets/sprint_rivals.jpg" alt="Sprint Rivals race screenshot"></div>
-            </div>
-
-            <div class="project has-media" id="project-leetlog">
-                <div class="project-content">
-                    <div class="project-name">Leetlog</div>
-                    <div class="project-desc">A spaced-practice LeetCode tracker built on the idea that
-                        confusion on prep roadmaps is bad sequencing, not inherent difficulty. It organizes 459
-                        problems into a 77-pattern taxonomy grouped by <em>technique</em> rather than problem
-                        name, scores each pattern by retained strength using an exponential-decay model
-                        (&tau; = 30 days) so mastery fades like memory instead of staying ticked off, and serves
-                        one focus pattern at a time in curriculum order &mdash; blocked practice rather than a
-                        scattered list. Built AI-first with Claude Code.</div>
-                    <div class="project-tech">
-                        <span class="tech">Python</span>
-                        <span class="tech">FastAPI</span>
-                        <span class="tech">SQLite</span>
-                        <span class="tech">Jinja2</span>
-                        <span class="tech">Vanilla JS (no build step)</span>
-                        <span class="tech">LeetCode GraphQL API</span>
-                        <span class="tech">Claude Code</span>
-                    </div>
-                </div>
-                <div class="project-media"><img src="assets/leetlog.jpg" alt="Leetlog"></div>
-            </div>
-
-            <div class="project has-media" id="project-gemnight">
-                <div class="project-content">
-                    <div class="project-name">GemNight</div>
-                    <div class="project-desc">A native iOS app for planning dates around the
-                        places you&rsquo;ve saved. Instead of just giving you a list of spots, GemNight turns them into
-                        an actual night out by figuring out the order, timing, cost, when to leave, and things like
-                        weather or a long drive between stops.<br><br>
-                        I built it AI-first with Claude Code: a SwiftUI app with a Python data pipeline over Google
-                        Places and live Open-Meteo weather, plus a hand-curated venue layer. Houston and Boston are the initial demo
-                        markets, with the goal of scaling the same experience to cities across the country. You can
-                        also share an entire date itinerary through a URL, without accounts or a database. Currently
-                        in user testing.</div>
-                    <div class="project-tech">
-                        <span class="tech">Swift</span>
-                        <span class="tech">SwiftUI</span>
-                        <span class="tech">iOS</span>
-                        <span class="tech">MapKit</span>
-                        <span class="tech">Core Location</span>
-                        <span class="tech">Python</span>
-                        <span class="tech">Google Places API</span>
-                        <span class="tech">Open-Meteo</span>
-                        <span class="tech">Claude Code</span>
-                    </div>
-                </div>
-                <div class="project-media"><img src="assets/gemnight_demo.png" alt="GemNight &mdash; Discover, the plan, and the closing screen"></div>
-            </div>
-
-            <div class="project has-media" id="project-centrality">
-                <div class="project-content">
-                    <div class="project-name">Centrality iOS</div>
-                    <div class="project-desc">Mobile productivity app built as part of Meta University iOS Engineering
-                        internship. Targeted towards students, working professionals, and productivity lovers. Includes
-                        collaborative tasks, usage dashboard, filtering and category options. Inspired by Todoist.</div>
-                    <div class="project-tech">
-                        <span class="tech">Objective-C</span>
-                        <span class="tech">Xcode</span>
-                        <span class="tech">iOS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">📺 Demo</a>
-                        <a href="#" class="project-link">💻 Code</a>
-                    </div>
-                </div>
-                <div class="project-media"><video src="assets/centrality_demo.mp4" alt="Centrality iOS"
-                        controls></video>
-                </div>
-            </div>
-
-            <div class="project has-media" id="project-ilingual">
-                <div class="project-content">
-                    <div class="project-name">iLingual.ai</div>
-                    <div class="project-desc">AI-powered translation app leveraging GPT-4 to provide contextual and
-                        accurate translations including regional dialects, situational, and logical context. Group final
-                        project for Harvard's CS178 (Engineering Usable Interactive Systems).</div>
-                    <div class="project-tech">
-                        <span class="tech">React.js</span>
-                        <span class="tech">Flask</span>
-                        <span class="tech">GPT-4 API</span>
-                        <span class="tech">Figma</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">📺 Demo</a>
-                    </div>
-                </div>
-                <div class="project-media"><img src="assets/iLingualLogo.png" alt="iLingual.ai"></div>
-            </div>
-
-            <div class="project has-media" id="project-beachbrawl">
-                <div class="project-content">
-                    <div class="project-name">BeachBrawl</div>
-                    <div class="project-desc">Two-dimensional spin on Space
-                        Invaders. Blast spaceships coming from the sky and sharks coming from the sea for a new high
-                        score!</div>
-                    <div class="project-tech">
-                        <span class="tech">Unity</span>
-                        <span class="tech">C#</span>
-                    </div>
-                </div>
-                <div class="project-media"><video src="assets/beach_brawl_demo.mp4" alt="BeachBrawl" controls></video>
-                </div>
-            </div>
-
-        </section>
-
-        <section id="contact">
-            <h2>🤝 Let's Connect</h2>
-
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/samuel-osa-agbontaen" class="contact-link" target="_blank"
-                    rel="noopener noreferrer">
-                    💼 LinkedIn
-                </a>
-                <a href="https://github.com/sosaagbontaen" class="contact-link" target="_blank"
-                    rel="noopener noreferrer">
-                    🐙 GitHub
-                </a>
-                <a href="mailto:soagbontaen@gmail.com" class="contact-link" target="_blank" rel="noopener noreferrer">
-                    ✉️ Email
-                </a>
-                <a href="https://docs.google.com/document/d/1e9oXwRbos4srqYezNB6YPxI8x_D3UBXKy3oJ2n3dcGg/edit?usp=sharing"
-                    class="contact-link" target="_blank" rel="noopener noreferrer">
-                    📄 Resume
-                </a>
-            </div>
-
-        </section>
-    </div>
-
+    <script src="scripts/data.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 
