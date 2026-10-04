@@ -377,8 +377,11 @@ window.TIMELINE = [
     peek: "Since leaving Coalition I've been building my own products AI-first: a racing game, two iOS apps in testing and daily use, and tools for myself.",
     body: [
       "Since leaving Coalition in August 2026 I've been building my own products AI-first. I come up with the idea, set the product and technical direction, design the experience and test it with real people; Claude Code writes most of the implementation.",
-      "It's let me ship far more than I could have alone: a 3D racing game with a pre-launch audience in 48 countries, a date-night planner in user testing, a voice journal I use every day, and a few tools for myself."
+      "It's let me ship far more than I could have alone: a 3D racing game with a pre-launch audience in 48 countries, a date-night planner in user testing, a voice journal I use every day, and a few tools for myself.",
+      "I plan and track every project in one Linear workspace."
     ],
+    techLabel: "How I work",
+    tech: ["Claude Code", "Linear"],
     subsLabel: "Key projects",
     subs: ["codename-sleep", "gemnight", "sprint-rivals", "quickkey", "leetlog", "dumpnotes"]
   },
