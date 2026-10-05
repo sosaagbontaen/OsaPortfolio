@@ -198,6 +198,9 @@ a.ix:hover { background: rgba(255, 255, 255, 0.04); }
 .ch-card:hover .chev { border-color: var(--c); color: #fff; }
 
 .subs { position: relative; margin: 10px 0 0 26px; padding: 4px 0 0 26px; border-left: 1px solid var(--line); display: grid; gap: 10px; }
+/* One column that may shrink: an auto track grew to the widest line and pushed narrow screens sideways. */
+.subs { grid-template-columns: minmax(0, 1fr); }
+.sub { min-width: 0; }
 .subs-l { margin: 4px 0 2px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
 .sub {
   position: relative; display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 14px; align-items: center;
@@ -232,6 +235,20 @@ a.ix:hover { background: rgba(255, 255, 255, 0.04); }
 .g-hero.banner .mz-ic { width: 72px; height: 72px; border-radius: 16px; font-size: 30px; }
 .g-hero.banner .mz-grid { grid-template-columns: repeat(6, 1fr); gap: 18px; }
 .g-hero.banner .cover.mosaic { height: 100%; }
+/* The timeline card's media slot shrinks on narrow screens, but the grid had
+   fixed 40px icons, so it spilled over the card title. Size the icons from the
+   slot (container units) and drop to two columns when the slot is narrow. */
+.cover.mosaic { overflow: hidden; container-type: inline-size; }
+.mz-grid { width: 100%; max-width: 156px; justify-items: center; }
+.mz-ic { width: min(40px, 26cqw); height: min(40px, 26cqw); font-size: min(18px, 11cqw); }
+@container (max-width: 140px) {
+  .mz-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .mz-ic { width: min(40px, 36cqw); height: min(40px, 36cqw); font-size: min(18px, 15cqw); }
+  .mz-ic:nth-child(odd) { transform: none; }
+}
+.pn-media .mz-grid, .g-hero.banner .mz-grid { max-width: none; }
+.pn-media .mz-ic { width: 56px; height: 56px; font-size: 24px; }
+.g-hero.banner .mz-ic { width: 72px; height: 72px; font-size: 30px; }
 
 /* Launch callouts (Sprint Rivals) */
 .ln-pill {
@@ -240,7 +257,9 @@ a.ix:hover { background: rgba(255, 255, 255, 0.04); }
 }
 .ln-pill i { width: 6px; height: 6px; border-radius: 50%; background: #1a1405; animation: ln-blink 1.6s infinite; }
 @keyframes ln-blink { 50% { opacity: 0.25; } }
-.ln-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.ln-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.ln-stats span { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 400px) { .ln-stats span { padding: 8px; } .ln-stats b { font-size: 17px !important; } }
 .ln-stats span { display: flex; flex-direction: column; padding: 10px 12px; border-radius: 10px; background: rgba(247, 201, 72, 0.07); border: 1px solid rgba(247, 201, 72, 0.18); font-size: 12px; color: var(--soft); }
 .ln-stats b { font-size: 22px; font-weight: 700; letter-spacing: -0.03em; color: var(--c); line-height: 1.15; }
 .ln-cta {
