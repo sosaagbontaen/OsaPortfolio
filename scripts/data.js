@@ -401,7 +401,7 @@ window.TIMELINE = [
       url: "https://sprintrivals.com/",
       cta: "Join the waitlist at sprintrivals.com",
       ctaShort: "Join the waitlist",
-      stats: [["440+", "on the waitlist"], ["59", "countries"], ["117K+", "TikTok views"]],
+      stats: [["455", "on the waitlist"], ["59", "countries"], ["124K+", "TikTok views"]],
       note: "Built from zero before launch, with interest from top track athletes."
     },
     icon: "assets/proj/sprint-icon.png",
@@ -412,13 +412,13 @@ window.TIMELINE = [
       "A 3D sprint-racing game for iPhone where you race the 60m, 100m, 200m and 400m against a field of eight. You control your runner with a two-thumb rhythm mechanic, dip at the finish, then watch the race back from the broadcast camera or first person and save clips to share.",
       "It's built with SwiftUI and SceneKit, with a Python and Blender pipeline that turns open-source body models into rigged, customizable athletes, plus Game Center leaderboards and indoor and outdoor venues. A Cloudflare Workers backend handles the waitlist, feedback and analytics."
     ],
-    stat: { value: "440+", label: "people on the waitlist across 59 countries, from zero before launch" },
+    stat: { value: "455", label: "people on the waitlist across 59 countries, from zero before launch" },
     highlights: [
       "3D sprint racing: 60m, 100m, 200m and 400m",
       "Customizable athletes from a Python and Blender pipeline",
       "Game Center leaderboards",
       "Replays from the broadcast camera or first person, saved as clips",
-      "117K+ views on TikTok, with one post at 40K, and interest from top track athletes"
+      "124K+ views on TikTok, with one post at 40K, and interest from top track athletes"
     ],
     tech: ["Swift", "SwiftUI", "SceneKit / Metal", "AVFoundation", "GameKit", "Python", "Blender", "Cloudflare Workers", "Claude Code"],
     links: [{ label: "Join the waitlist", href: "https://sprintrivals.com/" }],
