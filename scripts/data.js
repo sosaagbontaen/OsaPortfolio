@@ -377,7 +377,7 @@ window.TIMELINE = [
     peek: "Since leaving Coalition I've been building my own products AI-first: a racing game, two iOS apps in testing and daily use, and tools for myself.",
     body: [
       "Since leaving Coalition in August 2026 I've been building my own products AI-first. I come up with the idea, set the product and technical direction, design the experience and test it with real people; Claude Code writes most of the implementation.",
-      "It's let me ship far more than I could have alone: a 3D racing game with a pre-launch audience in 59 countries, a date-night planner in user testing, a voice journal I use every day, and a few tools for myself.",
+      "It's let me ship far more than I could have alone: a 3D racing game with a pre-launch audience in 64 countries, a date-night planner in user testing, a voice journal I use every day, and a few tools for myself.",
       "I plan and track every project in one Linear workspace."
     ],
     techLabel: "How I work",
@@ -401,7 +401,7 @@ window.TIMELINE = [
       url: "https://sprintrivals.com/",
       cta: "Join the waitlist at sprintrivals.com",
       ctaShort: "Join the waitlist",
-      stats: [["455", "on the waitlist"], ["59", "countries"], ["124K+", "TikTok views"]],
+      stats: [["545", "on the waitlist"], ["64", "countries"], ["153K+", "TikTok views"]],
       note: "Built from zero before launch, with interest from top track athletes."
     },
     icon: "assets/proj/sprint-icon.png",
@@ -412,13 +412,13 @@ window.TIMELINE = [
       "A 3D sprint-racing game for iPhone where you race the 60m, 100m, 200m and 400m against a field of eight. You control your runner with a two-thumb rhythm mechanic, dip at the finish, then watch the race back from the broadcast camera or first person and save clips to share.",
       "It's built with SwiftUI and SceneKit, with a Python and Blender pipeline that turns open-source body models into rigged, customizable athletes, plus Game Center leaderboards and indoor and outdoor venues. A Cloudflare Workers backend handles the waitlist, feedback and analytics."
     ],
-    stat: { value: "455", label: "people on the waitlist across 59 countries, from zero before launch" },
+    stat: { value: "545", label: "people on the waitlist across 64 countries, from zero before launch" },
     highlights: [
       "3D sprint racing: 60m, 100m, 200m and 400m",
       "Customizable athletes from a Python and Blender pipeline",
       "Game Center leaderboards",
       "Replays from the broadcast camera or first person, saved as clips",
-      "124K+ views on TikTok, with one post at 40K, and interest from top track athletes"
+      "153K+ views on TikTok, with one post at 40K, and interest from top track athletes"
     ],
     tech: ["Swift", "SwiftUI", "SceneKit / Metal", "AVFoundation", "GameKit", "Python", "Blender", "Cloudflare Workers", "Claude Code"],
     links: [{ label: "Join the waitlist", href: "https://sprintrivals.com/" }],
