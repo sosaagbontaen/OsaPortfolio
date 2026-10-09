@@ -477,4 +477,39 @@
   renderTimeline();
   showPanel(window.FEATURED);
   route();
+
+  // Live Sprint Rivals numbers from the same API the landing page reads (2026-10-09).
+  // data.js keeps the last known values, so the page is still right if this call fails.
+  function liveStats() {
+    fetch("https://api.sprintrivals.com/stats")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        const sr = byId["sprint-rivals"];
+        if (!sr || !d || typeof d.players !== "number" || !Array.isArray(d.countries) || !d.countries.length) return;
+        const players = String(d.players), countries = String(d.countries.length);
+        let changed = false;
+        const set = (obj, key, val) => {
+          if (obj[key] !== val) { obj[key] = val; changed = true; }
+        };
+        if (sr.launch) sr.launch.stats.forEach((s) => {
+          if (/waitlist/.test(s[1])) set(s, 0, players);
+          if (/countries/.test(s[1])) set(s, 0, countries);
+        });
+        if (sr.stat) {
+          set(sr.stat, "value", players);
+          set(sr.stat, "label", sr.stat.label.replace(/across \d+ countries/, "across " + countries + " countries"));
+        }
+        ITEMS.forEach((it) => (it.body || []).forEach((para, i) => {
+          set(it.body, i, para.replace(/audience in \d+ countries/, "audience in " + countries + " countries"));
+        }));
+        if (!changed) return;
+        renderTimeline();
+        const shown = panelId;
+        panelId = null;
+        showPanel(shown);
+        if (current) renderDetail(byId[current]);
+      })
+      .catch(() => {});
+  }
+  liveStats();
 })();
