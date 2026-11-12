@@ -401,7 +401,7 @@ window.TIMELINE = [
       url: "https://sprintrivals.com/",
       cta: "Join the waitlist at sprintrivals.com",
       ctaShort: "Join the waitlist",
-      stats: [["1464", "on the waitlist"], ["81", "countries"], ["411K+", "TikTok views"]],
+      stats: [["1464", "on the waitlist"], ["81", "countries"], ["460K+", "TikTok views"]],
       note: "Built from zero before launch, with interest from top track athletes."
     },
     icon: "assets/proj/sprint-icon.png",
@@ -418,7 +418,7 @@ window.TIMELINE = [
       "Customizable athletes from a Python and Blender pipeline",
       "Game Center leaderboards",
       "Replays from the broadcast camera or first person, saved as clips",
-      "411K+ views on TikTok, with one post at 40K, and interest from top track athletes"
+      "460K+ views on TikTok, with one post at 40K, and interest from top track athletes"
     ],
     tech: ["Swift", "SwiftUI", "SceneKit / Metal", "AVFoundation", "GameKit", "Python", "Blender", "Cloudflare Workers", "Claude Code"],
     links: [{ label: "Join the waitlist", href: "https://sprintrivals.com/" }],
